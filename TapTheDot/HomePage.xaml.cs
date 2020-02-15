@@ -12,9 +12,20 @@ namespace TapTheDot
             InitializeComponent();
         }
 
+
         async void Handle_Clicked(object sender, System.EventArgs e)
         {
             await Navigation.PopToRootAsync();
+        }
+
+
+        public void ButtonSettings()
+        {
+            _ = new Button
+            {
+                Text = "Settings",
+
+            };
         }
     }
 }

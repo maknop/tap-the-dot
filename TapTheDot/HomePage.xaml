@@ -1,6 +1,16 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage Title="Home Page" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TapTheDot.HomePage">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TapTheDot.HomePage" NavigationPage.HasNavigationBar="false">
+    <!--  Screen 3 of final document  -->
     <StackLayout>
-        <Label Text="Page Two" />
+        <Label Text="Dot Ninjas"
+               FontAttributes="Bold"
+               FontSize="40"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand" />
+
+        <!-- Top left -->
+        <Button Text="Settings"
+                Clicked="Handle_Clicked" />
+
     </StackLayout>
 </ContentPage>
