@@ -18,9 +18,10 @@ namespace TapTheDot
             InitializeComponent();
         }
 
-        async void Handle_Clicked(object sender, System.EventArgs e)
+       
+        void Handle_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new NavigationPage(new HomePage()));
+            App.Current.MainPage = new HomePage();
         }
     }
 }
