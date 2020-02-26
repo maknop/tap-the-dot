@@ -19,7 +19,8 @@
                  <Button Text="Leaderboard"
 
                     Grid.Column="1"
-                    HorizontalOptions="Center" />
+                    HorizontalOptions="Center"
+                    Clicked="Handle_Clicked1"/>
                  
         </Grid>
             <Grid VerticalOptions="FillAndExpand">
