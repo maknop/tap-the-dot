@@ -10,15 +10,16 @@ namespace TapTheDot
         public HomePage()
         {
             InitializeComponent();
+                
         }
 
 
-        async void Handle_Clicked(object sender, System.EventArgs e)
+        void NavigateButton_OnClicked(object sender, EventArgs e)
         {
-            await Navigation.PopToRootAsync();
+            App.Current.MainPage = new SettingsPage();
         }
 
-
+        
         public void ButtonSettings()
         {
             _ = new Button
@@ -29,3 +30,8 @@ namespace TapTheDot
         }
     }
 }
+
+
+        
+       
+ 

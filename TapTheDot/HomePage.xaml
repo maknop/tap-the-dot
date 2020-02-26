@@ -1,16 +1,56 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TapTheDot.HomePage" NavigationPage.HasNavigationBar="false">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TapTheDot.HomePage">
+    
     <!--  Screen 3 of final document  -->
-    <StackLayout>
-        <Label Text="Dot Ninjas"
-               FontAttributes="Bold"
-               FontSize="40"
-               HorizontalOptions="Center"
-               VerticalOptions="CenterAndExpand" />
 
-        <!-- Top left -->
-        <Button Text="Settings"
-                Clicked="Handle_Clicked" />
+    <StackLayout >
+        <StackLayout
+            BackgroundColor="CornflowerBlue">
+            
+        <Grid>
+            <Grid.ColumnDefinitions>
+                 <ColumnDefinition Width="*" />
+                 <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+                <Button Text="Settings"
+                    Grid.Column="0"
+                    HorizontalOptions="Center"
+                    Clicked="NavigateButton_OnClicked"/>
+                 <Button Text="Leaderboard"
 
+                    Grid.Column="1"
+                    HorizontalOptions="Center" />
+                 
+        </Grid>
+            <Grid VerticalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                        <Label Text="Dot*Ninjas"
+                            FontFamily = "LastNinja-BL6B.ttf#LastNinja-BL6B"
+                            TextColor="Black"
+                            FontSize="30"
+                            Grid.Row="1"
+                            VerticalOptions="Center"
+                             HorizontalOptions="Center"
+                           />
+
+                         <Button Text="New Game"
+                             Grid.Row="3"
+                             VerticalOptions="Center"
+                             HorizontalOptions="Center"
+                             />
+
+                         <Button Text="Resume"
+                            Grid.Row="4"
+                            VerticalOptions="Center"
+                             HorizontalOptions="Center" />
+ </Grid>
+
+      </StackLayout>
     </StackLayout>
 </ContentPage>
