@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TapTheDot.SettingsPage">
+    <StackLayout>
+        <Label
+            Text = "Dot*Ninja"
+            FontFamily = "LastNinja-BL6B.ttf#LastNinja-BL6B"
+            TextColor="Black"
+            FontSize="30"
+            HorizontalOptions="Center">
+           </Label>
+        <Slider x:Name="slider"
+                Maximum="360"
+                MaximumTrackColor="Gray"
+                MinimumTrackColor="DarkRed"
+                ThumbColor="Black"/>
+        <Label
+            Text="Volume"
+            FontFamily = "LastNinja-BL6B.ttf#LastNinja-BL6B"
+            FontSize="15"
+            HorizontalOptions="Center"/>
+        <Button Text = "Home Page"
+                HorizontalOptions="Center"
+                VerticalOptions="EndAndExpand"
+                    Clicked="NavigateButton_OnClicked1"/>
+    </StackLayout>
+</ContentPage>
