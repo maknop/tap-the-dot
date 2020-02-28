@@ -140,5 +140,6 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\LastNinja-BL6B.ttf" />
+    <BundleResource Include="Resources\ninja.png" />
   </ItemGroup>
 </Project>
