@@ -138,4 +138,7 @@
       <Name>TapTheDot</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\LastNinja-BL6B.ttf" />
+  </ItemGroup>
 </Project>
