@@ -104,7 +104,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TapTheDot\TapTheDot.csproj">
-      <Project>{62F664FE-970D-4619-AE0A-82596E58D552}</Project>
+      <Project>{F6EC999E-63E3-4C3E-82E7-D1FC4998B3FD}</Project>
       <Name>TapTheDot</Name>
     </ProjectReference>
   </ItemGroup>
