@@ -2,8 +2,26 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TapTheDot.GameScreen">
 <StackLayout >
         <StackLayout
-            BackgroundColor="CornflowerBlue">
-        
+            BackgroundColor="DeepPink">
+            
+        <Grid>
+            <Grid.ColumnDefinitions>
+                 <ColumnDefinition Width="*" />
+                 <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+                <Button Text="Level 1"
+                    Grid.Column="0"
+                    HorizontalOptions="Center"
+                    Clicked ="Button_Clicked"
+                    />
+                 <Button Text="Leaderboard"
+
+                    Grid.Column="1"
+                    HorizontalOptions="Center"
+                    />
+                 
+        </Grid>
+            
 
       </StackLayout>
     </StackLayout>
