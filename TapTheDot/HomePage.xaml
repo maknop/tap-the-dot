@@ -50,7 +50,7 @@
                             Grid.Row="4"
                             VerticalOptions="Center"
                              HorizontalOptions="Center" />
- </Grid>
+        </Grid>
 
       </StackLayout>
     </StackLayout>
