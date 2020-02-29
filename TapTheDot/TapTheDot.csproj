@@ -30,5 +30,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Persistance\SQLiteAsyncConnection.cs" />
+    <Compile Remove="ISQLiteDb.cs" />
   </ItemGroup>
 </Project>
