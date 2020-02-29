@@ -44,7 +44,7 @@
                              Grid.Row="3"
                              VerticalOptions="Center"
                              HorizontalOptions="Center"
-                             />
+                             Clicked="GameScreen_onClicked"/>
 
                          <Button Text="Resume"
                             Grid.Row="4"
