@@ -11,5 +11,9 @@ namespace TapTheDot
         {
             InitializeComponent();
         }
+
+        void Button_Clicked(System.Object sender, System.EventArgs e)
+        {
+        }
     }
 }
