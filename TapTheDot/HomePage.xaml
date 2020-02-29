@@ -11,17 +11,16 @@
             <Grid.ColumnDefinitions>
                  <ColumnDefinition Width="*" />
                  <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="1px"/>
             </Grid.ColumnDefinitions>
                 <Button Text="Settings"
                     Grid.Column="0"
                     HorizontalOptions="Center"
                     Clicked="NavigateButton_OnClicked"/>
                  <Button Text="Leaderboard"
+
                     Grid.Column="1"
                     HorizontalOptions="Center"
                     Clicked="Handle_Clicked1"/>
-                <Label Grid.Column=" 2"/>
                  
         </Grid>
             <Grid VerticalOptions="FillAndExpand">
@@ -38,18 +37,19 @@
                             FontSize="30"
                             Grid.Row="1"
                             VerticalOptions="Center"
-                            HorizontalOptions="Center" />
+                             HorizontalOptions="Center"
+                           />
 
                          <Button Text="New Game"
                              Grid.Row="3"
                              VerticalOptions="Center"
                              HorizontalOptions="Center"
-                             Clicked="NewGame_OnClicked"/>
+                             />
 
                          <Button Text="Resume"
                             Grid.Row="4"
                             VerticalOptions="Center"
-                            HorizontalOptions="Center" />
+                             HorizontalOptions="Center" />
  </Grid>
 
       </StackLayout>

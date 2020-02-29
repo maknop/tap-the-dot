@@ -130,22 +130,12 @@
     <PackageReference Include="SQLitePCLRaw.core">
       <Version>2.0.2</Version>
     </PackageReference>
-    <PackageReference Include="SkiaSharp">
-      <Version>1.68.1.1</Version>
-    </PackageReference>
-    <PackageReference Include="SkiaSharp.Views">
-      <Version>1.68.1.1</Version>
-    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\TapTheDot\TapTheDot.csproj">
-      <Project>{F6EC999E-63E3-4C3E-82E7-D1FC4998B3FD}</Project>
+      <Project>{62F664FE-970D-4619-AE0A-82596E58D552}</Project>
       <Name>TapTheDot</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\LastNinja-BL6B.ttf" />
-    <BundleResource Include="Resources\ninja.png" />
   </ItemGroup>
 </Project>

@@ -16,8 +16,6 @@
     <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
     <PackageReference Include="sqlite" Version="3.13.0" />
     <PackageReference Include="SQLitePCLRaw.core" Version="2.0.2" />
-    <PackageReference Include="SkiaSharp" Version="1.68.1.1" />
-    <PackageReference Include="SkiaSharp.Views" Version="1.68.1.1" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="leaderboard.db" />
@@ -30,5 +28,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Persistance\SQLiteAsyncConnection.cs" />
+    <Compile Remove="ISQLiteDb.cs" />
   </ItemGroup>
 </Project>

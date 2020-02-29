@@ -6,19 +6,24 @@ using Xamarin.Forms;
 
 namespace TapTheDot
 {
-    public class Leaderboard
+    public partial class Leaderboard : ContentPage
     {
+        public Leaderboard(int id, string username, int score)
+        {
+            this.Id = id;
+            this.Username = username;
+            this.Score = score;
+        }
+
         public new int Id { get; set; }
         public string Username { get; set; }
         public int Score { get; set; }
-    }
-    public partial class Leaderboard : ContentPage
-    {
+
         public Leaderboard()
         {
             InitializeComponent();
 
-            var connection = DependencyService.Get<ISQLiteDb>().GetConnection();
+            //var connection = DependencyService.Get<ISQLiteDb>().GetConnection();
         }
     }
 }
