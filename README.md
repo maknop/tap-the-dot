@@ -7,3 +7,9 @@ Contributors:
 <li>Luke Monington</li>
 <li>Khadijo Muhumed</li>
 <li>Gwen McFadden</li>
+<br />
+<br />
+#Libraries Used
+<li>Skiasharp</li>
+<li>SQLite</li>
+<li>.NET Framework</li>
