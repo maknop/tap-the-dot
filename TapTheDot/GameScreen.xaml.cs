@@ -8,27 +8,39 @@ namespace TapTheDot
 {
     public partial class GameScreen : ContentPage
     {
+        SKBitmap helloBitmap;
+
         public GameScreen()
         {
             InitializeComponent();
 
-            Title = "Simple Circle";
+            SKBitmap bitmap = new SKBitmap();
+            SKCanvas canvas = new SKCanvas(bitmap);
+
+
+            using (canvas = new SKCanvas(bitmap))
+            {
+                // call drawing function
+            }
+
+
+            //Title = "Simple Circle";
+            /*
             _ = new SKCanvasView
             {
                 BackgroundColor = Color.Red,
                 VerticalOptions = LayoutOptions.FillAndExpand,   // stretch the view
                 HorizontalOptions = LayoutOptions.FillAndExpand, // stretch the view
             };
+            */
         }
-
-        //public int OnCanvasViewPaintSurface { get; }
 
 
         private void Button_Clicked(object sender, EventArgs e)
         {
             DisplayAlert("Notification", "Do you want to save this item?", "Save", "Don't Save");
         }
-
+        /*
         private void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
         {
             _ = new SKPaint
@@ -39,6 +51,7 @@ namespace TapTheDot
             };
 
         }
+        */
     }
 
 }
