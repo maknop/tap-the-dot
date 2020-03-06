@@ -8,6 +8,7 @@
             <Grid.ColumnDefinitions>
                  <ColumnDefinition Width="*" />
                  <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
                 <Button Text="Level 1"
                     Grid.Column="0"
@@ -22,7 +23,7 @@
                  />
 
                 <Button Text="Back"
-                    Grid.Column="1"
+                    Grid.Column="2"
                     HorizontalOptions="EndAndExpand"
                     Clicked ="Button_ClickedBack"/>
                  
