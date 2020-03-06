@@ -10,7 +10,6 @@ Contributors:
 <br />
 <br />
 Libraries Used
----------------
 <li>Skiasharp</li>
 <li>SQLite</li>
 <li>.NET Framework</li>
