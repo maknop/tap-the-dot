@@ -29,6 +29,11 @@ namespace TapTheDot
             DisplayAlert("Notification", "Do you want to save this item?", "Save", "Don't Save");
         }
 
+        private void Button_ClickedBack(object sender, EventArgs e)
+        {
+            App.Current.MainPage = new HomePage();
+        }
+
         private void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
         {
             _ = new SKPaint

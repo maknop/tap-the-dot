@@ -6,7 +6,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TapTheDot.Android", "TapThe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TapTheDot.iOS", "TapTheDot.iOS\TapTheDot.iOS.csproj", "{988DA5F8-E02A-4CA6-BF4A-99F99E0FD950}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TapTheDot", "TapTheDot\TapTheDot.csproj", "{62F664FE-970D-4619-AE0A-82596E58D552}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TapTheDot", "TapTheDot\TapTheDot.csproj", "{62F664FE-970D-4619-AE0A-82596E58D552}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
