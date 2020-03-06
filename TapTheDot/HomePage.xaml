@@ -14,15 +14,16 @@
          
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="2*"/>
+                
             </Grid.RowDefinitions>
                 <Button Text="Settings"
                     Grid.Column="0"
+                    Grid.Row="0"
                     HorizontalOptions="Center"
                     Clicked="NavigateButton_OnClicked"/>
                  <Button Text="Leaderboard"
-
+                    Grid.Row="0"
                     Grid.Column="1"
                     HorizontalOptions="Center"
                     Clicked="Handle_Clicked1"/>
