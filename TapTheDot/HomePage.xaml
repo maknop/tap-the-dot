@@ -11,7 +11,12 @@
             <Grid.ColumnDefinitions>
                  <ColumnDefinition Width="*" />
                  <ColumnDefinition Width="*" />
+         
             </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
                 <Button Text="Settings"
                     Grid.Column="0"
                     HorizontalOptions="Center"
