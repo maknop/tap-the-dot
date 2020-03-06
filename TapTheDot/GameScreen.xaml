@@ -13,12 +13,14 @@
                     Grid.Column="0"
                     HorizontalOptions="Center"
                     Clicked ="Button_Clicked"
-                    />
+                 />
+
                  <Button Text="Leaderboard"
 
                     Grid.Column="1"
                     HorizontalOptions="Center"
-                    />
+                 />
+
                 <Button Text="Back"
                     Grid.Column="1"
                     HorizontalOptions="EndAndExpand"
