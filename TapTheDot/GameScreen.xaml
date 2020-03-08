@@ -37,7 +37,7 @@
         </Grid>
 
         <Grid
-            BackgroundColor="LemonChiffon">
+            BackgroundColor="Honeydew">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
