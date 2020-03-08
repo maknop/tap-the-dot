@@ -23,16 +23,6 @@ namespace TapTheDot
                 // call drawing function
             }
 
-
-            //Title = "Simple Circle";
-            /*
-            _ = new SKCanvasView
-            {
-                BackgroundColor = Color.Red,
-                VerticalOptions = LayoutOptions.FillAndExpand,   // stretch the view
-                HorizontalOptions = LayoutOptions.FillAndExpand, // stretch the view
-            };
-            */
         }
 
 
