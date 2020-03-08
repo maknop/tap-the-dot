@@ -2,10 +2,11 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TapTheDot.GameScreen">
 <StackLayout >
         <StackLayout
-            BackgroundColor="Coral"
+            BackgroundColor="Aquamarine"
             HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
             
-        <Grid>
+        <Grid
+            BackgroundColor="DarkCyan">
             <Grid.ColumnDefinitions>
                  <ColumnDefinition Width="*" />
                  <ColumnDefinition Width="*" />
@@ -35,18 +36,27 @@
                        />
                  
         </Grid>
-
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height ="100*"/>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" HorizontalOptions="Center"> ""</Label>
+            </Grid>
         <Grid
-            BackgroundColor="Honeydew">
+            >
             <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <Image Source="circle.jpg" Grid.Row="0">
+                
+                    <RowDefinition Height="*"/>
+                    
+                </Grid.RowDefinitions>
+            <Image  Source="circle.jpg" HorizontalOptions="Start" VerticalOptions="Start" WidthRequest="480">
             </Image>
 
-            <Image Source="dot.jpg" HorizontalOptions="Start" VerticalOptions="Start" Margin="40"> </Image>
-            <Image Source="person.jpg"></Image>
-        </Grid>
+            <Image Source="dot.jpg" HorizontalOptions="Start" VerticalOptions="Start" Margin="40" WidthRequest="65" HeightRequest="120"> </Image>
+             <Image Source="person.jpg" HorizontalOptions="Start" VerticalOptions="Start" WidthRequest="70" HeightRequest="90" Rotation="180"> </Image>
+                
+            
+            </Grid>
             
 
       </StackLayout>
