@@ -16,6 +16,8 @@ namespace TapTheDot
         public MainPage()
         {
             InitializeComponent();
+
+            ninja.ImageSource = (FileImageSource)ImageSource.FromFile("ninja.png");
         }
 
        
