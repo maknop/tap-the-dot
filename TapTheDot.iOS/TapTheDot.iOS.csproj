@@ -149,9 +149,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\ninja.png">
+    <BundleResource Include="Resources\ninja.png">
       <SubType></SubType>
       <Generator></Generator>
-    </AndroidResource>
+    </BundleResource>
+    <BundleResource Include="Resources\LastNinja-BL6B.ttf" />
   </ItemGroup>
 </Project>
