@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TapTheDot.GameScreen">
+﻿<?xml version="1.0" encoding="UTF-8"?> 
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TapTheDot.GameScreen" >
 <StackLayout >
         <StackLayout
             BackgroundColor="Coral">
@@ -28,7 +28,13 @@
                     Clicked ="Button_ClickedBack"/>
                  
         </Grid>
+            <Grid>
+                <Image Source="circle.jpg">
 
+                </Image>
+                <Image Source="dot.jpg" HorizontalOptions="Start" VerticalOptions="Start" Margin="40"></Image>
+                <Image Source="person.jpg"></Image>
+            </Grid> 
             
 
       </StackLayout>
