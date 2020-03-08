@@ -3,9 +3,11 @@
     
     <!--  Screen 3 of final document  -->
 
-    <StackLayout >
+    <StackLayout>
         <StackLayout
-            BackgroundColor="CornflowerBlue">
+            BackgroundColor="CornflowerBlue"
+            HorizontalOptions="Fill">
+
             
         <Grid>
             <Grid.ColumnDefinitions>
