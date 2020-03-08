@@ -1,8 +1,9 @@
-﻿<?xml version="1.0" encoding="UTF-8"?> 
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TapTheDot.GameScreen" >
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TapTheDot.GameScreen">
 <StackLayout >
         <StackLayout
-            BackgroundColor="Coral">
+            BackgroundColor="Coral"
+            HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
             
         <Grid>
             <Grid.ColumnDefinitions>
@@ -10,32 +11,42 @@
                  <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
                 <Button Text="Level 1"
                     Grid.Column="0"
                     HorizontalOptions="Center"
                     Clicked ="Button_Clicked"
-                 />
-
+                    Grid.Row="0"
+                    />
                  <Button Text="Leaderboard"
-
+                    Grid.Row="0"
                     Grid.Column="1"
                     HorizontalOptions="Center"
-                 />
-
+                    />
                 <Button Text="Back"
                     Grid.Column="2"
                     HorizontalOptions="EndAndExpand"
-                    Clicked ="Button_ClickedBack"/>
+                    Clicked ="Button_ClickedBack"
+                    Grid.Row="0"
+                       />
                  
         </Grid>
-            <Grid>
-                <Image Source="circle.jpg">
 
-                </Image>
-                <Image Source="dot.jpg" HorizontalOptions="Start" VerticalOptions="Start" Margin="40"></Image>
-                <Image Source="person.jpg"></Image>
-               
-            </Grid> 
+        <Grid
+            BackgroundColor="LemonChiffon">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Image Source="circle.jpg" Grid.Row="0">
+            </Image>
+
+            <Image Source="dot.jpg" HorizontalOptions="Start" VerticalOptions="Start" Margin="40"> </Image>
+            <Image Source="person.jpg"></Image>
+        </Grid>
             
 
       </StackLayout>

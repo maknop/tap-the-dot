@@ -5,7 +5,8 @@
 
     <StackLayout >
         <StackLayout
-            BackgroundColor="CornflowerBlue">
+            BackgroundColor="CornflowerBlue"
+            HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
             
         <Grid>
             <Grid.ColumnDefinitions>
