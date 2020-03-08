@@ -15,6 +15,7 @@
                 VerticalOptions="CenterAndExpand"
                 HorizontalOptions="CenterAndExpand"/>
 
-        <Button Text="Play" Clicked="Handle_Clicked" />
+        <Button Text="Play" Clicked="Handle_Clicked"
+                Padding="0,0,0,50"/>
     </StackLayout>
 </ContentPage>
