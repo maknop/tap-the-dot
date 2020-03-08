@@ -9,8 +9,7 @@ namespace TapTheDot
     {
         public HomePage()
         {
-            InitializeComponent();
-                
+            InitializeComponent();     
         }
 
 
@@ -33,14 +32,6 @@ namespace TapTheDot
             App.Current.MainPage = new GameScreen();
         }
 
-        public void ButtonSettings()
-        {
-            _ = new Button
-            {
-                Text = "Settings",
-
-            };
-        }
     }
 }
 
