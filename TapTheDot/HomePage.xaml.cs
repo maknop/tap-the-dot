@@ -9,7 +9,7 @@ namespace TapTheDot
     {
         public HomePage()
         {
-            InitializeComponent();     
+            InitializeComponent();
         }
 
 
