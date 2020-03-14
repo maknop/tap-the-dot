@@ -1,21 +1,21 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TapTheDot.GameScreen">
-<StackLayout >
+    <StackLayout>
         <StackLayout
             BackgroundColor="Aquamarine"
             HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-            
-        <Grid
-            BackgroundColor="DarkCyan">
-            <Grid.ColumnDefinitions>
-                 <ColumnDefinition Width="*" />
-                 <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
 
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
+            <Grid
+            BackgroundColor="DarkCyan">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
 
                 <Button Text="Level 1"
                     Grid.Column="0"
@@ -23,7 +23,7 @@
                     Clicked ="Button_Clicked"
                     Grid.Row="0"
                     />
-                 <Button Text="Leaderboard"
+                <Button Text="Leaderboard"
                     Grid.Row="0"
                     Grid.Column="1"
                     HorizontalOptions="Center"
@@ -34,32 +34,31 @@
                     Clicked ="Button_ClickedBack"
                     Grid.Row="0"
                        />
-                 
-        </Grid>
+
+            </Grid>
+
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height ="100*"/>
                 </Grid.RowDefinitions>
-                <Label Grid.Row="0" HorizontalOptions="Center"> ""</Label>
+                <Label Grid.Row="0" HorizontalOptions="Center">""</Label>
             </Grid>
-        <Grid
-            >
-            <Grid.RowDefinitions>
-                
+
+            <Grid>
+                <Grid.RowDefinitions>
+
                     <RowDefinition Height="*"/>
-                    
+
                 </Grid.RowDefinitions>
-            <Image  Source="circle.jpg" HorizontalOptions="Start" VerticalOptions="Start" WidthRequest="480">
-            </Image>
+                <Image  Source="circle.jpg" HorizontalOptions="Start" VerticalOptions="Start" WidthRequest="480"></Image>
+                <Image Source="dot.jpg" HorizontalOptions="Start" VerticalOptions="Start" Margin="40" WidthRequest="65" HeightRequest="120"></Image>
+                <Image Source="person.jpg" HorizontalOptions="Start" VerticalOptions="Start" WidthRequest="70" HeightRequest="90" Rotation="180"></Image>
 
-            <Image Source="dot.jpg" HorizontalOptions="Start" VerticalOptions="Start" Margin="40" WidthRequest="65" HeightRequest="120"> </Image>
-             <Image Source="person.jpg" HorizontalOptions="Start" VerticalOptions="Start" WidthRequest="70" HeightRequest="90" Rotation="180"> </Image>
-                
-            
+
             </Grid>
-            
 
-      </StackLayout>
+
+        </StackLayout>
     </StackLayout>
 
 </ContentPage>
