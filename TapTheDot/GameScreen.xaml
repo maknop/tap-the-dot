@@ -1,15 +1,20 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TapTheDot.GameScreen">
-<StackLayout >
-        <StackLayout
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             x:Class="TapTheDot.GameScreen">
+
+    <!--<SKCanvasView x:Name="canvasView"
+                  PaintSurface="canvasView_PaintSurface" />-->
+    <!--<views:SKCanvasView PaintSurface="OnPainting" />-->
+    <StackLayout
             BackgroundColor="Aquamarine"
             HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-            
-        <Grid
-            BackgroundColor="DarkCyan">
+
+        <Grid BackgroundColor="DarkCyan">
             <Grid.ColumnDefinitions>
-                 <ColumnDefinition Width="*" />
-                 <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
@@ -17,49 +22,47 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-                <Button Text="Level 1"
+            <Button Text="Level 1"
                     Grid.Column="0"
                     HorizontalOptions="Center"
                     Clicked ="Button_Clicked"
                     Grid.Row="0"
                     />
-                 <Button Text="Leaderboard"
+            <Button Text="Leaderboard"
                     Grid.Row="0"
                     Grid.Column="1"
-                    HorizontalOptions="Center"
-                    />
-                <Button Text="Back"
+                    HorizontalOptions="Center" />
+            <Button Text="Back"
                     Grid.Column="2"
                     HorizontalOptions="EndAndExpand"
                     Clicked ="Button_ClickedBack"
-                    Grid.Row="0"
-                       />
-                 
+                    Grid.Row="0" />
+
         </Grid>
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height ="100*"/>
-                </Grid.RowDefinitions>
-                <Label Grid.Row="0" HorizontalOptions="Center"> ""</Label>
-            </Grid>
-        <Grid
-            >
+        <Grid>
+        <BoxView Color="Aquamarine" VerticalOptions="FillAndExpand" HeightRequest="180"
+                 HorizontalOptions="FillAndExpand"/>
+        </Grid>
+        <Grid>
+            <views:SKCanvasView PaintSurface="OnPainting" />
             <Grid.RowDefinitions>
-                
-                    <RowDefinition Height="*"/>
-                    
-                </Grid.RowDefinitions>
-            <Image  Source="circle.jpg" HorizontalOptions="Start" VerticalOptions="Start" WidthRequest="480">
-            </Image>
+                <RowDefinition Height="400" />
+            </Grid.RowDefinitions>
+        </Grid>
+        
+        <!--<Grid>
+            <Grid.RowDefinitions>
 
-            <Image Source="dot.jpg" HorizontalOptions="Start" VerticalOptions="Start" Margin="40" WidthRequest="65" HeightRequest="120"> </Image>
-             <Image Source="person.jpg" HorizontalOptions="Start" VerticalOptions="Start" WidthRequest="70" HeightRequest="90" Rotation="180"> </Image>
-                
-            
-            </Grid>
-            
+                <RowDefinition Height="*"/>
 
-      </StackLayout>
+            </Grid.RowDefinitions>
+            <Image Source="circle.jpg" HorizontalOptions="Start" VerticalOptions="Start" WidthRequest="480"></Image>
+            <Image Source="dot.jpg" HorizontalOptions="Start" VerticalOptions="Start" Margin="40" WidthRequest="65" HeightRequest="120"></Image>
+            <Image Source="person.jpg" HorizontalOptions="Start" VerticalOptions="Start" WidthRequest="70" HeightRequest="90" Rotation="180"></Image>
+        </Grid>-->
+
+
     </StackLayout>
+
 
 </ContentPage>
