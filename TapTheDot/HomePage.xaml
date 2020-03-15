@@ -23,13 +23,13 @@
                     <Button Text="Settings"
                         Grid.Column="0"
                         Grid.Row="1"
-                        TextColor="#FFFFFF"
+                        TextColor="Green"
                         HorizontalOptions="Center"
                         Clicked="NavigateButton_OnClicked"/>
                      <Button Text="Leaderboard"
                         Grid.Row="1"
                         Grid.Column="1"
-                        TextColor="#FFFFFF"
+                        TextColor="Green"
                         HorizontalOptions="Center"
                         Clicked="Handle_Clicked1"/>
                  
@@ -53,14 +53,14 @@
 
                              <Button Text="New Game"
                                 Grid.Row="3"
-                                TextColor="#FFFFFF"
+                                TextColor="Green"
                                 VerticalOptions="Center"
                                 HorizontalOptions="Center"
                                 Clicked="GameScreen_onClicked"/>
 
                              <Button Text="Resume"
                                 Grid.Row="4"
-                                TextColor="#FFFFFF"
+                                TextColor="Green"
                                 VerticalOptions="Center"
                                 HorizontalOptions="Center" />
             </Grid>
