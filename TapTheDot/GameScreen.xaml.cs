@@ -76,6 +76,8 @@ namespace TapTheDot
             // Line Rotation
             canvas.Save();
             float seconds = dateTime.Millisecond;
+
+            // Divide by some number n depending on level
             canvas.RotateDegrees(seconds);
             canvas.DrawLine(0, -100, 0, -150, playerLine);
             // DrawLine from X1, Y1, to X2, Y2
