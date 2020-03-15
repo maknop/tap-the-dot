@@ -5,7 +5,7 @@ using SkiaSharp.Views.Forms;
 using Xamarin.Forms;
 
 namespace TapTheDot
-{
+{ 
     public partial class GameScreen : ContentPage
     {
         //SKBitmap helloBitmap;
@@ -35,21 +35,16 @@ namespace TapTheDot
             // the strokeWidth is subject to the scale and transforms
             // antialias makes it look nice
         };
+
         public GameScreen()
         {
             InitializeComponent();
 
-            //SKCanvasView canvasView;
-            //SKBitmap circleBitmap;
-            //SKBitmap bitmap = new SKBitmap();
-            //SKCanvas canvas = new SKCanvas(bitmap);
-
-
-            //using (canvas = new SKCanvas(bitmap))
-            //{
-            //    // call drawing function
-            //}
-
+            Device.StartTimer(TimeSpan.FromMilliseconds(1f / 60), () =>
+              {
+                  canvasView.InvalidateSurface();
+                  return true;
+              });
         }
 
         private void OnPainting(object sender, SKPaintSurfaceEventArgs e)
@@ -69,14 +64,23 @@ namespace TapTheDot
             // dropping to width/20f makes it extremely large
             canvas.Scale(width / 400f);
 
-            //// draw the circle fill
+            // draw the circle fill
             canvas.DrawCircle(0, 0, 100, circleFill);
 
             // draw the circle border
             canvas.DrawCircle(0, 0, 150, circleBorder);
 
+            // Instantiate Date/Time
+            DateTime dateTime = DateTime.Now;
+
+            // Line Rotation
+            canvas.Save();
+            float seconds = dateTime.Millisecond;
+            canvas.RotateDegrees(seconds);
             canvas.DrawLine(0, -100, 0, -150, playerLine);
             // DrawLine from X1, Y1, to X2, Y2
+            canvas.Restore();
+            
         }
         private void Button_ClickedBack(object sender, EventArgs e)
         {
