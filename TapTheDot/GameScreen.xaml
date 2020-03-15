@@ -40,11 +40,14 @@
 
         </Grid>
         <Grid>
-        <BoxView Color="Aquamarine" VerticalOptions="FillAndExpand" HeightRequest="120"
+        <BoxView Color="Aquamarine" VerticalOptions="FillAndExpand" HeightRequest="180"
                  HorizontalOptions="FillAndExpand"/>
         </Grid>
         <Grid>
             <views:SKCanvasView PaintSurface="OnPainting" />
+            <Grid.RowDefinitions>
+                <RowDefinition Height="400" />
+            </Grid.RowDefinitions>
         </Grid>
         
         <!--<Grid>
