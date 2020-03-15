@@ -44,7 +44,7 @@
                  HorizontalOptions="FillAndExpand"/>
         </Grid>
         <Grid>
-            <views:SKCanvasView PaintSurface="OnPainting" />
+            <views:SKCanvasView x:Name="canvasView" PaintSurface="OnPainting" />
             <Grid.RowDefinitions>
                 <RowDefinition Height="400" />
             </Grid.RowDefinitions>
