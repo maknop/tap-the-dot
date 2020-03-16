@@ -8,8 +8,8 @@ namespace TapTheDot
 { 
     public partial class GameScreen : ContentPage
     {
-        //SKBitmap helloBitmap;
         // create the paint for the filled circle
+        
         SKPaint circleFill = new SKPaint
         {
             IsAntialias = true,
@@ -130,6 +130,13 @@ namespace TapTheDot
 
         }
 
+        int score = 0;
+        private void Button_Clicked_2(object sender, EventArgs e)
+        {
+
+            score += 1;
+            MainLabel.Text = "Score: " + score.ToString();
+        }
     }
 
 }
