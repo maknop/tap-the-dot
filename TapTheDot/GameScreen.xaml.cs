@@ -37,6 +37,13 @@ namespace TapTheDot
             // antialias makes it look nice
         };
 
+        SKPaint enemy = new SKPaint
+        {
+            IsAntialias = true,
+            Style = SKPaintStyle.Fill,
+            Color = SKColors.Orange
+        };
+
         public GameScreen()
         {
             InitializeComponent();
@@ -68,12 +75,14 @@ namespace TapTheDot
             // draw the circle fill and border
             canvas.DrawCircle(0, 0, 100, circleFill);
             canvas.DrawCircle(0, 0, 150, circleBorder);
+            canvas.DrawCircle(0, -125, 18, enemy);
 
 
             // Instantiate Date/Time
             DateTime dateTime = DateTime.Now;
             float milliseconds = dateTime.Millisecond;
             float seconds = dateTime.Second;
+            
             // formula: (seconds % [# rotations per second] * [360 / # rotations per second]) + (milliseconds / (float)[1000 / (360 / # rotations per second)]
             // rotates once per second
             //float Rotation = milliseconds / (float)2.77777778;
@@ -85,6 +94,9 @@ namespace TapTheDot
             float slowRotation = (seconds % 4 * 90) + (milliseconds / (float)11.11111111);
             // rotates once every 5 seconds
             float slowestRotation = (seconds % 5 * 72) + (milliseconds / (float)13.88888889);
+            
+            // enemy movement
+            // float enemyMovement = 
 
 
             // We want to call the canvas.Save() method before the rotating the player line and then the canvas.Restore() method after
@@ -93,7 +105,7 @@ namespace TapTheDot
             canvas.RotateDegrees(slowestRotation);
             // DrawLine will draw a line from from X1, Y1, to X2, Y2
             canvas.DrawLine(0, -100, 0, -150, playerLine);
-
+            canvas.Restore();
 
         }
         private void Button_ClickedBack(object sender, EventArgs e)
