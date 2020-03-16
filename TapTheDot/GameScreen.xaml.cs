@@ -22,7 +22,8 @@ namespace TapTheDot
             IsAntialias = true,
             Style = SKPaintStyle.Stroke,
             Color = SKColors.Blue,
-            StrokeWidth = 5
+            StrokeWidth = 5,
+            StrokeCap = SKStrokeCap.Round
         };
 
         SKPaint playerLine = new SKPaint
@@ -39,8 +40,9 @@ namespace TapTheDot
         public GameScreen()
         {
             InitializeComponent();
-
-            Device.StartTimer(TimeSpan.FromMilliseconds(1f / 60), () =>
+            // In order for the player to continually move, we need to ensure the paint surface event handler is repeatedly executed
+            // We want the timer to refresh 60 times per second, since that is the typical refresh rate of most monitors
+            Device.StartTimer(TimeSpan.FromSeconds(1f / 144), () =>
               {
                   canvasView.InvalidateSurface();
                   return true;
@@ -61,26 +63,26 @@ namespace TapTheDot
 
             // Set transforms
             canvas.Translate(width / 2, height / 2);
-            // dropping to width/20f makes it extremely large
             canvas.Scale(width / 400f);
 
-            // draw the circle fill
+            // draw the circle fill and border
             canvas.DrawCircle(0, 0, 100, circleFill);
-
-            // draw the circle border
             canvas.DrawCircle(0, 0, 150, circleBorder);
+
 
             // Instantiate Date/Time
             DateTime dateTime = DateTime.Now;
+            float milliseconds = dateTime.Millisecond;
+            float Rotation = milliseconds / (float)2.77777778;
 
-            // Line Rotation
+
+            // We want to call the canvas.Save() method before the rotating the player line and then the canvas.Restore() method after
             canvas.Save();
-            float seconds = dateTime.Millisecond;
-
-            // Divide by some number n depending on level
-            canvas.RotateDegrees(seconds);
+            // Canvas.Rotate Degrees will rotate the canvas by the specified number of degrees. We want this number to count up to exactly 360 for a full circle
+            //float rotation = milliseconds / (float)2.77777778;
+            canvas.RotateDegrees(Rotation);
+            // DrawLine will draw a line from from X1, Y1, to X2, Y2
             canvas.DrawLine(0, -100, 0, -150, playerLine);
-            // DrawLine from X1, Y1, to X2, Y2
             canvas.Restore();
             
         }
