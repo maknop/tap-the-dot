@@ -74,16 +74,23 @@ namespace TapTheDot
             DateTime dateTime = DateTime.Now;
             float milliseconds = dateTime.Millisecond;
             float seconds = dateTime.Second;
+            // formula: (seconds % [# rotations per second] * [360 / # rotations per second]) + (milliseconds / (float)[1000 / (360 / # rotations per second)]
             // rotates once per second
-            float fastRotation = milliseconds / (float)2.77777778;
+            //float Rotation = milliseconds / (float)2.77777778;
             // rotates once every 2 seconds
-            float slowRotation = (seconds % 2 * 180) + (milliseconds / (float)5.5555556);
+            float fastRotation = (seconds % 2 * 180) + (milliseconds / (float)5.5555556);
+            // rotates once every 3 seconds
+            float mediumRotation = (seconds % 3 * 120) + (milliseconds / (float)8.333333333);
+            // rotates once every 4 seconds
+            float slowRotation = (seconds % 4 * 90) + (milliseconds / (float)11.11111111);
+            // rotates once every 5 seconds
+            float slowestRotation = (seconds % 5 * 72) + (milliseconds / (float)13.88888889);
 
 
             // We want to call the canvas.Save() method before the rotating the player line and then the canvas.Restore() method after
             canvas.Save();
             // Canvas.Rotate Degrees will rotate the canvas by the specified number of degrees. We want this number to count up to exactly 360 for a full circle
-            canvas.RotateDegrees(slowRotation);
+            canvas.RotateDegrees(slowestRotation);
             // DrawLine will draw a line from from X1, Y1, to X2, Y2
             canvas.DrawLine(0, -100, 0, -150, playerLine);
 
