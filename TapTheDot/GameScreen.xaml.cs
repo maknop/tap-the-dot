@@ -5,11 +5,17 @@ using SkiaSharp.Views.Forms;
 using Xamarin.Forms;
 
 namespace TapTheDot
-{ 
+{
+
     public partial class GameScreen : ContentPage
     {
-        // create the paint for the filled circle
-        
+        float randEnemy = 0;
+        float fastRotation = 0;
+        float mediumRotation = 0;
+        float slowRotation = 0;
+        float slowestRotation = 0;
+        int score = 0;
+        //// create the paint for the filled circle
         SKPaint circleFill = new SKPaint
         {
             IsAntialias = true,
@@ -49,11 +55,17 @@ namespace TapTheDot
             InitializeComponent();
             // In order for the player to continually move, we need to ensure the paint surface event handler is repeatedly executed
             // We want the timer to refresh 60 times per second, since that is the typical refresh rate of most monitors
+
             Device.StartTimer(TimeSpan.FromSeconds(1f / 144), () =>
               {
                   canvasView.InvalidateSurface();
                   return true;
               });
+        }
+        private float randValue()
+        {
+            Random cRand = new Random();
+            return (float)cRand.NextDouble();
         }
 
         private void OnPainting(object sender, SKPaintSurfaceEventArgs e)
@@ -75,28 +87,25 @@ namespace TapTheDot
             // draw the circle fill and border
             canvas.DrawCircle(0, 0, 100, circleFill);
             canvas.DrawCircle(0, 0, 150, circleBorder);
-            canvas.DrawCircle(0, -125, 18, enemy);
 
 
+            float position = randValue();
             // Instantiate Date/Time
             DateTime dateTime = DateTime.Now;
             float milliseconds = dateTime.Millisecond;
             float seconds = dateTime.Second;
-            
+
             // formula: (seconds % [# rotations per second] * [360 / # rotations per second]) + (milliseconds / (float)[1000 / (360 / # rotations per second)]
             // rotates once per second
             //float Rotation = milliseconds / (float)2.77777778;
             // rotates once every 2 seconds
-            float fastRotation = (seconds % 2 * 180) + (milliseconds / (float)5.5555556);
+            this.fastRotation = (seconds % 2 * 180) + (milliseconds / (float)5.5555556);
             // rotates once every 3 seconds
-            float mediumRotation = (seconds % 3 * 120) + (milliseconds / (float)8.333333333);
+            this.mediumRotation = (seconds % 3 * 120) + (milliseconds / (float)8.333333333);
             // rotates once every 4 seconds
-            float slowRotation = (seconds % 4 * 90) + (milliseconds / (float)11.11111111);
+            this.slowRotation = (seconds % 4 * 90) + (milliseconds / (float)11.11111111);
             // rotates once every 5 seconds
-            float slowestRotation = (seconds % 5 * 72) + (milliseconds / (float)13.88888889);
-            
-            // enemy movement
-            // float enemyMovement = 
+            this.slowestRotation = (seconds % 5 * 72) + (milliseconds / (float)13.88888889);
 
 
             // We want to call the canvas.Save() method before the rotating the player line and then the canvas.Restore() method after
@@ -105,6 +114,11 @@ namespace TapTheDot
             canvas.RotateDegrees(slowestRotation);
             // DrawLine will draw a line from from X1, Y1, to X2, Y2
             canvas.DrawLine(0, -100, 0, -150, playerLine);
+            canvas.Restore();
+            
+            canvas.Save();
+            canvas.RotateDegrees(randEnemy);
+            canvas.DrawCircle(0, -125, 18, enemy);
             canvas.Restore();
 
         }
@@ -129,13 +143,22 @@ namespace TapTheDot
             };
 
         }
+        private float randMovement()
+        {
+            float enemyMovement = randValue();
+            return enemyMovement;
+        }
 
-        int score = 0;
+
         private void Button_Clicked_2(object sender, EventArgs e)
         {
+            if (fastRotation + 90 > randEnemy && fastRotation - 90 < randEnemy)
+            {
+                randEnemy = randMovement() * 360;
+                score += 1;
+                MainLabel.Text = "Score: " + score.ToString();
+            }
 
-            score += 1;
-            MainLabel.Text = "Score: " + score.ToString();
         }
     }
 

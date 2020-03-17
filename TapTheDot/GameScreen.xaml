@@ -63,6 +63,8 @@
         <Grid>
             <Button Clicked="Button_Clicked_2"
                     Text="Tap!"
+                    FontAttributes="Bold"
+                    FontSize="Large"
                     Grid.Row="0"/>
         </Grid>
 
