@@ -39,9 +39,20 @@
                     Grid.Row="0" />
 
         </Grid>
-        <Grid>
-        <BoxView Color="Aquamarine" VerticalOptions="FillAndExpand" HeightRequest="180"
+        <!--<Grid>
+        <BoxView Color="Aquamarine" VerticalOptions="FillAndExpand" HeightRequest="120"
                  HorizontalOptions="FillAndExpand"/>
+        </Grid>-->
+        <Grid>
+            
+            <!--<Entry x:Name="MainEntry"/>-->
+            
+            <Label x:Name="MainLabel"
+                   Text="Score: 0"
+                   FontSize="Title"
+                   HorizontalOptions="Center"
+                   Grid.Row="1"/>
+            
         </Grid>
         <Grid>
             <views:SKCanvasView x:Name="canvasView" PaintSurface="OnPainting" />
@@ -49,17 +60,15 @@
                 <RowDefinition Height="400" />
             </Grid.RowDefinitions>
         </Grid>
-        
-        <!--<Grid>
-            <Grid.RowDefinitions>
+        <Grid>
+            <Button Clicked="Button_Clicked_2"
+                    Text="Tap!"
+                    FontAttributes="Bold"
+                    FontSize="Large"
+                    Grid.Row="0"/>
+        </Grid>
 
-                <RowDefinition Height="*"/>
 
-            </Grid.RowDefinitions>
-            <Image Source="circle.jpg" HorizontalOptions="Start" VerticalOptions="Start" WidthRequest="480"></Image>
-            <Image Source="dot.jpg" HorizontalOptions="Start" VerticalOptions="Start" Margin="40" WidthRequest="65" HeightRequest="120"></Image>
-            <Image Source="person.jpg" HorizontalOptions="Start" VerticalOptions="Start" WidthRequest="70" HeightRequest="90" Rotation="180"></Image>
-        </Grid>-->
 
 
     </StackLayout>
