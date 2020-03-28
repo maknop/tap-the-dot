@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using SkiaSharp;
 using SkiaSharp.Views.Forms;
 using Xamarin.Forms;
@@ -9,6 +8,8 @@ namespace TapTheDot
 
     public partial class GameScreen : ContentPage
     {
+        SharedResources s = new SharedResources();
+
         float randEnemy = 80;
         float fastRotation = 0;
         float rFastRotation = 0;
@@ -21,8 +22,8 @@ namespace TapTheDot
         float currentRotation = 0;
         float x = 0;
         bool reverse = false;
-        int score = 0;
-        int level = 1;
+        //int score;
+        //int level;
         float positionCorrection = 0;
         //// create the paint for the filled circle
         SKPaint circleFill = new SKPaint
@@ -62,6 +63,12 @@ namespace TapTheDot
         public GameScreen()
         {
             InitializeComponent();
+
+            //s.setLevel(level);
+            //s.setScore(score);
+            MainLabel.Text = "Score: " + s.getScore().ToString();
+            LevelLabel.Text = "Level: " + s.getLevel().ToString();
+
             // In order for the player to continually move, we need to ensure the paint surface event handler is repeatedly executed
             // We want the timer to refresh 60 times per second, since that is the typical refresh rate of most monitors
 
@@ -158,6 +165,10 @@ namespace TapTheDot
         }
         private void Button_ClickedBack(object sender, EventArgs e)
         {
+            //s.setScore(score);
+            //s.setLevel(level);
+            //s.incrementLevel();
+            //s.incrementScore();
             App.Current.MainPage = new HomePage();
         }
 
@@ -188,14 +199,18 @@ namespace TapTheDot
         {
             if ((currentRotation%360 )+ 27 > randEnemy && (currentRotation%360) - 27 < randEnemy)
             {
-
+         
                 randEnemy = randMovement() * 360;
-                score += 1;
-                MainLabel.Text = "Score: " + score.ToString();
-                LevelLabel.Text = "Level: " + level.ToString();
-                if (score % 5 == 4)
+                //score += 1;
+                //s.setScore(score);
+                s.incrementScore();
+                MainLabel.Text = "Score: " + s.getScore().ToString();
+                LevelLabel.Text = "Level: " + s.getLevel().ToString();
+                if (s.getScore() % 2 == 0) // % 5 == 4
                 {
-                    level += 1;
+                    //level += 1;
+                    //s.setLevel(level);
+                    s.incrementLevel();
                 }
                 //if (score % 2 == 1)
                 //{
