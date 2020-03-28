@@ -62,7 +62,8 @@
                                 Grid.Row="4"
                                 TextColor="Green"
                                 VerticalOptions="Center"
-                                HorizontalOptions="Center" />
+                                HorizontalOptions="Center"
+                                Clicked="Resume_onClicked"/>
             </Grid>
 
         </StackLayout>
