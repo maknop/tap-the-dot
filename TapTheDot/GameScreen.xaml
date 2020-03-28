@@ -46,12 +46,14 @@
         <Grid>
             
             <!--<Entry x:Name="MainEntry"/>-->
-            <Label x:Name="LevelLabel"
+            <Label x:FieldModifier="public"
+                   x:Name="LevelLabel"
                    Text="Level: 1"
                    FontSize="Title"
                    HorizontalOptions="Center"
                    Grid.Row="0"/>
-            <Label x:Name="MainLabel"
+            <Label x:FieldModifier="public"
+                   x:Name="MainLabel"
                    Text="Score: 0"
                    FontSize="Title"
                    HorizontalOptions="Center"
