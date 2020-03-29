@@ -96,11 +96,21 @@ namespace TapTheDot
             Thread.Sleep(17);
             MainLabel.Text = "Score: " + score.ToString();
             LevelLabel.Text = "Level: " + level.ToString();
-            DebugLabel.Text = "Speed: " + speed.ToString();
-            // Make sure the current rotation never becomes negative, because a negative value would mess up the "hit detection"
+            DebugLabel.Text = "Speed: " + speed.ToString() + " randEnemy: " + randEnemy.ToString();
+            // Make sure the current rotation never becomes negative, because a negative value would mess up the "hit detection" in the button feature
             if (currentRotation <= 0)
             {
                 currentRotation += 360;
+            }
+            // Make sure the randEnemy location never becomes negative, because a negative value would mess up the "hit detection" in the button feature
+            if (randEnemy <= 0)
+            {
+                randEnemy += 360;
+            }
+            // Make sure the randEnemy location never goes above 360, because it would mess up the "hit detection"
+            if (randEnemy >= 360)
+            {
+                randEnemy %= 360;
             }
             // We want to call the canvas.Save() method before the rotating the player line and then the canvas.Restore() method after
             canvas.Save();
@@ -158,7 +168,7 @@ namespace TapTheDot
         {
             if ((currentRotation%360 )+ 27 > randEnemy && (currentRotation%360) - 27 < randEnemy)
             {
-                randEnemy = randMovement() * 360;
+                //randEnemy = randMovement() * 360;
                 score += 1;
                 if (score % 5 == 0)
                 {
@@ -171,14 +181,16 @@ namespace TapTheDot
                 if (score % 2 == 1)
                 {
                     reverse = true;
+                    randEnemy -= 40 + (randMovement() * 130);
                 }
                 if (score % 2 == 0)
                 {
                     reverse = false;
+
+                    randEnemy += 40 + (randMovement() * 130);
                 }
             }
 
         }
     }
-
 }
