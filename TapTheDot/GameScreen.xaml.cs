@@ -17,7 +17,7 @@ namespace TapTheDot
         int score = 0;
         int level = 1;
         int speed = 1;
-
+        int lives = 10;
         // create the paint for the filled circle
         SKPaint circleFill = new SKPaint
         {
@@ -96,7 +96,7 @@ namespace TapTheDot
             Thread.Sleep(17);
             MainLabel.Text = "Score: " + score.ToString();
             LevelLabel.Text = "Level: " + level.ToString();
-            DebugLabel.Text = "Speed: " + speed.ToString() + " randEnemy: " + randEnemy.ToString();
+            DebugLabel.Text = "Speed: " + speed.ToString() + " Lives: " + lives.ToString();
             // Make sure the current rotation never becomes negative, because a negative value would mess up the "hit detection" in the button feature
             if (currentRotation <= 0)
             {
@@ -190,7 +190,10 @@ namespace TapTheDot
                     randEnemy += 40 + (randMovement() * 130);
                 }
             }
-
+            else
+            {
+                lives -= 1;
+            }
         }
     }
 }
