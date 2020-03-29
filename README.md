@@ -9,7 +9,7 @@ Contributors:
 <li>Gwen McFadden</li>
 <br />
 <br />
-## Libraries Used
+# Libraries Used
 <li>Skiasharp</li>
 <li>SQLite</li>
 <li>.NET Framework</li>
