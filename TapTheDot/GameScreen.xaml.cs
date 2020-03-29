@@ -95,8 +95,8 @@ namespace TapTheDot
             // the sleep function tells the computer how many milliseconds to wait before updating again. We want this to be 1000 milliseconds / 60 fps ~ 17 milliseconds
             Thread.Sleep(17);
             MainLabel.Text = "Score: " + score.ToString();
-            LevelLabel.Text = "Level: " + level.ToString();
-            DebugLabel.Text = " Lives: " + lives.ToString();
+            LevelLabel.Text = "Level: " + level.ToString() + " rand enemy: " + randEnemy + " current rotation: " + currentRotation%360;
+            DebugLabel.Text = " Lives: " + lives.ToString() + " reverse: " + reverse.ToString();
             // Make sure the current rotation never becomes negative, because a negative value would mess up the "hit detection" in the button feature
             if (currentRotation <= 0)
             {
@@ -107,18 +107,29 @@ namespace TapTheDot
             {
                 randEnemy += 360;
             }
-            // There was a bug where if the enemy position was at 355 but the player was on location 5 degrees, it looks like the player should
-            // be able to tap on the dot, but since 355 is far away from 5, the tap would not register. Also if the player was at 355 but the
-            // enemy was at 5, the same issue was present. The next 2 if statements solves this bug by ensuring the Enemy never spawns  
-            // within 10 degrees of the "0" degree position
-            if (randEnemy % 360 > 350)
+            // The next 2 if statements solves a bug where the player can't tap on the dot near the 0 position
+            // by ensuring the Enemy never spawns within 20 degrees of the "0" degree position
+            if (randEnemy % 360 > 340)
             {
-                randEnemy -= 15;
+                randEnemy -= 20;
             }
 
-            if (randEnemy % 360 < 10)
+            if (randEnemy % 360 < 20)
             {
-                randEnemy += 15;
+                randEnemy += 20;
+            }
+            // If the player line passes over the enemy without tapping, the player loses a life
+            if (reverse == false && currentRotation % 360 > randEnemy + 21 && currentRotation % 360 < randEnemy + 30 )
+            {
+                lives -= 1;
+                reverse = true;
+                randEnemy -= 50 + (randMovement() * 130);
+            }
+            if (reverse == true && currentRotation % 360 < randEnemy - 21 && currentRotation % 360 > randEnemy - 30 )
+            {
+                lives -= 1;
+                reverse = false;
+                randEnemy += 50 + (randMovement() * 130);
             }
 
 
@@ -182,7 +193,7 @@ namespace TapTheDot
 
         private void Button_Clicked_2(object sender, EventArgs e)
         {
-            if ((currentRotation%360 )+ 27 > randEnemy && (currentRotation%360) - 27 < randEnemy)
+            if ((currentRotation%360 )+ 20 > randEnemy && (currentRotation%360) - 20 < randEnemy)
             {
                 //randEnemy = randMovement() * 360;
                 score += 1;
@@ -202,7 +213,6 @@ namespace TapTheDot
                 if (score % 2 == 0)
                 {
                     reverse = false;
-
                     randEnemy += 50 + (randMovement() * 130);
                 }
             }
