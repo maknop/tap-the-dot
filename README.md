@@ -1,4 +1,4 @@
-# TapTheDot
+# Tap The Dot
 
 Capstone project for BACS487 & BACS488 at the University of Northern Colorado. We  
 developed an implementation of the Pop the Lock game as a mobile application for  
