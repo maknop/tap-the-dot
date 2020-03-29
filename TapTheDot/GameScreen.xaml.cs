@@ -96,7 +96,7 @@ namespace TapTheDot
             Thread.Sleep(17);
             MainLabel.Text = "Score: " + score.ToString();
             LevelLabel.Text = "Level: " + level.ToString();
-            DebugLabel.Text = "Speed: " + speed.ToString() + " Lives: " + lives.ToString();
+            DebugLabel.Text = " Lives: " + lives.ToString();
             // Make sure the current rotation never becomes negative, because a negative value would mess up the "hit detection" in the button feature
             if (currentRotation <= 0)
             {
@@ -107,11 +107,27 @@ namespace TapTheDot
             {
                 randEnemy += 360;
             }
+            // There was a bug where if the enemy position was at 355 but the player was on location 5 degrees, it looks like the player should
+            // be able to tap on the dot, but since 355 is far away from 5, the tap would not register. Also if the player was at 355 but the
+            // enemy was at 5, the same issue was present. The next 2 if statements solves this bug by ensuring the Enemy never spawns  
+            // within 10 degrees of the "0" degree position
+            if (randEnemy % 360 > 350)
+            {
+                randEnemy -= 15;
+            }
+
+            if (randEnemy % 360 < 10)
+            {
+                randEnemy += 15;
+            }
+
+
             // Make sure the randEnemy location never goes above 360, because it would mess up the "hit detection"
             if (randEnemy >= 360)
             {
                 randEnemy %= 360;
             }
+
             // We want to call the canvas.Save() method before the rotating the player line and then the canvas.Restore() method after
             canvas.Save();
             if (reverse == false)
@@ -181,13 +197,13 @@ namespace TapTheDot
                 if (score % 2 == 1)
                 {
                     reverse = true;
-                    randEnemy -= 40 + (randMovement() * 130);
+                    randEnemy -= 50 + (randMovement() * 130);
                 }
                 if (score % 2 == 0)
                 {
                     reverse = false;
 
-                    randEnemy += 40 + (randMovement() * 130);
+                    randEnemy += 50 + (randMovement() * 130);
                 }
             }
             else
