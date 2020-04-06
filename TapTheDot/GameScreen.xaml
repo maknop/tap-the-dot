@@ -11,7 +11,7 @@
             BackgroundColor="Aquamarine"
             HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
 
-        <Grid BackgroundColor="DarkCyan">
+        <Grid BackgroundColor="Aquamarine">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
