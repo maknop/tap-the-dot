@@ -94,7 +94,7 @@ namespace TapTheDot
             canvas.DrawCircle(0, 0, 150, circleBorder);
             // Since we are making this game for 60 frames per second, we want it to update 60 times per second
             // the sleep function tells the computer how many milliseconds to wait before updating again. We want this to be 1000 milliseconds / 60 fps ~ 17 milliseconds
-            Thread.Sleep(17);
+            Thread.Sleep(1000/60);
             MainLabel.Text = "Score: " + score.ToString();
             LevelLabel.Text = "Level: " + level.ToString();
             DebugLabel.Text = " Lives: " + lives.ToString();
