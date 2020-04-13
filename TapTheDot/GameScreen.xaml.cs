@@ -153,7 +153,10 @@ namespace TapTheDot
                 currentRotation -= speed * 2;
             }
             
-
+            if (lives == 0)
+            {
+                App.Current.MainPage = new EndScreen();
+            }
 
             // Canvas.Rotate Degrees will rotate the canvas by the specified number of degrees. We want this number to count up to exactly 360 for a full circle
             canvas.RotateDegrees(currentRotation);

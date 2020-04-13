@@ -1,11 +1,43 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TapTheDot.EndScreen">
-   <StackLayout>
-       <Grid>
-           <!--<Label
-            Text="Score:" + score>
-            
-           </Label>-->
-       </Grid>
-   </StackLayout>
+    <StackLayout>
+        <Grid>
+            <Label x:Name="YouLose"
+                   Text="Loser"
+                   FontSize="Title"
+                   HorizontalOptions="Center"
+                   Grid.Row="0"/>
+            <Label x:Name="Score"
+                   Text="Default Score"
+                   FontSize="Title"
+                   HorizontalOptions="Center"
+                   Grid.Row="1"/>
+            <Label Text="Dot*Ninjas"
+                   FontFamily = "LastNinja-BL6B.ttf#LastNinja-BL6B"
+                   TextColor="Black"
+                   FontSize="30"
+                   Grid.Row="2"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                             />
+            <Button Text="Restart"
+                   Grid.Row="3"
+                   TextColor="Green"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   />
+            <Button Text="Home"
+                   Grid.Row="4"
+                   TextColor="Green"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center" 
+                    />
+            <Button Text="Leaderboard"
+                   Grid.Row="5"
+                   TextColor="Green"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center" 
+                    />
+        </Grid>
+    </StackLayout>
 </ContentPage>
