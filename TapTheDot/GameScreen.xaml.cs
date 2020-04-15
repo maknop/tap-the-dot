@@ -8,17 +8,19 @@ using Xamarin.Forms;
 
 namespace TapTheDot
 {
-
+    
     public partial class GameScreen : ContentPage
     {
         float randEnemy = 80;
         float currentRotation = 720;
-        bool reverse = false;
-        int score = 0;
-        int tracker = 0;
-        int level = 1;
-        int speed = 1;
-        int lives = 10;
+        public static bool reverse = false;
+        public static int score = 0;
+        public static int tracker = 0;
+        public static int level = 1;
+        public static int speed = 1;
+        public static int lives = 10;
+        
+        
         // create the paint for the filled circle
         SKPaint circleFill = new SKPaint
         {
@@ -196,7 +198,10 @@ namespace TapTheDot
             return enemyMovement;
         }
 
-
+        //GameScreen(int thescore)
+        //{
+        //    thescore = score;
+        //}
         private void Button_Clicked_2(object sender, EventArgs e)
         {
             if ((currentRotation%360 )+ 20 > randEnemy && (currentRotation%360) - 20 < randEnemy)

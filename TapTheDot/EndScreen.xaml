@@ -25,18 +25,21 @@
                    TextColor="Green"
                    VerticalOptions="Center"
                    HorizontalOptions="Center"
+                   Clicked="Restart_clicked"
                    />
             <Button Text="Home"
                    Grid.Row="4"
                    TextColor="Green"
                    VerticalOptions="Center"
                    HorizontalOptions="Center" 
+                   Clicked="Home_Clicked"
                     />
             <Button Text="Leaderboard"
                    Grid.Row="5"
                    TextColor="Green"
                    VerticalOptions="Center"
                    HorizontalOptions="Center" 
+                   Clicked="Leaderboard_Clicked"
                     />
         </Grid>
     </StackLayout>

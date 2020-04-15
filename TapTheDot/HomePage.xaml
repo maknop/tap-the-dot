@@ -25,13 +25,13 @@
                         Grid.Row="1"
                         TextColor="Green"
                         HorizontalOptions="Center"
-                        Clicked="NavigateButton_OnClicked"/>
+                        Clicked="Settings"/>
                      <Button Text="Leaderboard"
                         Grid.Row="1"
                         Grid.Column="1"
                         TextColor="Green"
                         HorizontalOptions="Center"
-                        Clicked="Handle_Clicked1"/>
+                        Clicked="Leaderboard"/>
                  
             </Grid>
                 <Grid VerticalOptions="FillAndExpand">
@@ -48,7 +48,7 @@
                                 FontSize="30"
                                 Grid.Row="1"
                                 VerticalOptions="Center"
-                                 HorizontalOptions="Center"
+                                HorizontalOptions="Center"
                              />
 
                              <Button Text="New Game"
@@ -56,13 +56,14 @@
                                 TextColor="Green"
                                 VerticalOptions="Center"
                                 HorizontalOptions="Center"
-                                Clicked="GameScreen_onClicked"/>
+                                Clicked="New_Game"/>
 
                              <Button Text="Resume"
                                 Grid.Row="4"
                                 TextColor="Green"
                                 VerticalOptions="Center"
-                                HorizontalOptions="Center" />
+                                HorizontalOptions="Center" 
+                                Clicked="Resume"/>
             </Grid>
 
         </StackLayout>

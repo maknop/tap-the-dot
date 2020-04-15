@@ -14,24 +14,34 @@ namespace TapTheDot
 
 
         // Navigates to 'Settings' page
-        void NavigateButton_OnClicked(object sender, EventArgs e)
+        void Settings(object sender, EventArgs e)
         {
             App.Current.MainPage = new SettingsPage();
 
         }
 
         // Navigates to 'Leaderboard' page
-        void Handle_Clicked1(object sender, EventArgs e)
+        void Leaderboard(object sender, EventArgs e)
         {
             App.Current.MainPage = new Leaderboard();
         }
 
         // Navigates to 'GameScreen' Page
-        void GameScreen_onClicked(object sender, EventArgs e)
+        void New_Game(object sender, EventArgs e)
         {
+            GameScreen.reverse = false;
+            GameScreen.score = 0;
+            GameScreen.tracker = 0;
+            GameScreen.level = 1;
+            GameScreen.speed = 1;
+            GameScreen.lives = 10;
             App.Current.MainPage = new GameScreen();
         }
 
+        void Resume(object sender, EventArgs e)
+        {
+            App.Current.MainPage = new GameScreen();
+        }
     }
 }
 
