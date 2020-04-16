@@ -2,7 +2,10 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="TapTheDot.MainPage" NavigationPage.HasNavigationBar="false" >
     <StackLayout
         BackgroundColor="Black">
-        <!-- Page with logo and 'start' button -->
+        
+
+
+            <!-- Page with logo and 'start' button -->
         <Label Text="G.K.L.M Productions"
                FontFamily = "LastNinja-BL6B.ttf#LastNinja-BL6B"
                             TextColor="Red"
@@ -19,6 +22,8 @@
         <Button TextColor="#FFFFFF"
                 BackgroundColor="Black"
                 Text="Play" Clicked="Handle_Clicked"
-                Padding="0,0,0,55"/>
+                Padding="0,0,0,55"
+                FontSize="Large"/>
+           
     </StackLayout>
 </ContentPage>

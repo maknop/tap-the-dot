@@ -5,7 +5,7 @@
 
     <StackLayout>
         <StackLayout
-            BackgroundColor="CornflowerBlue"
+            BackgroundColor="MediumBlue"
             HorizontalOptions="FillAndExpand"
             VerticalOptions="FillAndExpand">
 
@@ -23,15 +23,19 @@
                     <Button Text="Settings"
                         Grid.Column="0"
                         Grid.Row="1"
-                        TextColor="Green"
+                        TextColor="DarkRed"
                         HorizontalOptions="Center"
-                        Clicked="Settings"/>
+                        Clicked="Settings"
+                        BackgroundColor="FloralWhite"
+                        BorderColor="Black" BorderWidth="2"/>
                      <Button Text="Leaderboard"
                         Grid.Row="1"
                         Grid.Column="1"
-                        TextColor="Green"
+                        TextColor="DarkRed"
                         HorizontalOptions="Center"
-                        Clicked="Leaderboard"/>
+                        Clicked="Leaderboard"
+                       BackgroundColor="FloralWhite"
+                       BorderColor="Black" BorderWidth="2"/>
                  
             </Grid>
                 <Grid VerticalOptions="FillAndExpand">
@@ -44,26 +48,31 @@
                     </Grid.RowDefinitions>
                             <Label Text="Dot*Ninjas"
                                 FontFamily = "LastNinja-BL6B.ttf#LastNinja-BL6B"
-                                TextColor="Black"
+                                TextColor="White"
                                 FontSize="30"
                                 Grid.Row="1"
                                 VerticalOptions="Center"
                                 HorizontalOptions="Center"
+                                
                              />
 
                              <Button Text="New Game"
                                 Grid.Row="3"
-                                TextColor="Green"
+                                TextColor="DarkRed"
                                 VerticalOptions="Center"
                                 HorizontalOptions="Center"
-                                Clicked="New_Game"/>
+                                Clicked="New_Game"
+                                BackgroundColor="FloralWhite"
+                                 BorderColor="Black" BorderWidth="2"/>
 
                              <Button Text="Resume"
                                 Grid.Row="4"
-                                TextColor="Green"
+                                TextColor="DarkRed"
                                 VerticalOptions="Center"
                                 HorizontalOptions="Center" 
-                                Clicked="Resume"/>
+                                Clicked="Resume"
+                                BackgroundColor="FloralWhite"
+                                BorderColor="Black" BorderWidth="2"/>
             </Grid>
 
         </StackLayout>
