@@ -5,50 +5,62 @@
 
     <StackLayout>
         <StackLayout
-            BackgroundColor="MediumBlue"
-            HorizontalOptions="FillAndExpand"
+            BackgroundColor="DarkRed"
+            HorizontalOptions="CenterAndExpand"
             VerticalOptions="FillAndExpand">
 
             
             <Grid>
+                
                 <Grid.ColumnDefinitions>
                      <ColumnDefinition Width="*" />
                      <ColumnDefinition Width="*" />
          
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
                 
                 </Grid.RowDefinitions>
-                    <Button Text="Settings"
+
+                  <Label Text = "" Grid.Row="0" Padding="0,20,0,65"/>
+                  <Button Text="Settings"
                         Grid.Column="0"
                         Grid.Row="1"
                         TextColor="DarkRed"
                         HorizontalOptions="Center"
                         Clicked="Settings"
+                        FontFamily = "font4.ttf#font4"
+                        FontSize="Title"
                         BackgroundColor="FloralWhite"
-                        BorderColor="Black" BorderWidth="2"/>
+                        BorderColor="Black" BorderWidth="2"
+                        HeightRequest="50" BorderRadius="20"/>
                      <Button Text="Leaderboard"
                         Grid.Row="1"
                         Grid.Column="1"
                         TextColor="DarkRed"
                         HorizontalOptions="Center"
+                        FontFamily = "font4.ttf#font4"
+                        FontSize="Title"
                         Clicked="Leaderboard"
-                       BackgroundColor="FloralWhite"
-                       BorderColor="Black" BorderWidth="2"/>
-                 
-            </Grid>
+                        BackgroundColor="FloralWhite"
+                        HeightRequest="50" BorderRadius="20"
+                        BorderColor="Black" BorderWidth="2"/>
+                </Grid>
+            
+                
                 <Grid VerticalOptions="FillAndExpand">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="2*" />
+                        <RowDefinition Height="*" />
                         <RowDefinition Height="*" />
                         <RowDefinition Height="2*" />
                         <RowDefinition Height="*" />
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
-                            <Label Text="Dot*Ninjas"
+                     
+                            <Label Text="Dot*Ninja"
                                 FontFamily = "LastNinja-BL6B.ttf#LastNinja-BL6B"
-                                TextColor="White"
+                                TextColor="FloralWhite"
                                 FontSize="30"
                                 Grid.Row="1"
                                 VerticalOptions="Center"
@@ -56,15 +68,28 @@
                                 
                              />
 
+                            <Image Source="dojo.jpg" x:Name="dojo"
+                               
+                                 Grid.Row="2"
+                                 
+
+                                
+                                 VerticalOptions="Center"
+                                 HorizontalOptions="Center"/>
+
                              <Button Text="New Game"
                                 Grid.Row="3"
+                                FontAttributes="Bold"
                                 TextColor="DarkRed"
                                 VerticalOptions="Center"
                                 HorizontalOptions="Center"
                                 Clicked="New_Game"
                                 BackgroundColor="FloralWhite"
-                                 BorderColor="Black" BorderWidth="2"/>
-
+                                BorderColor="Black" BorderWidth="2"
+                                FontFamily = "font4.ttf#font4"
+                                FontSize="Title"
+                                HeightRequest="50" BorderRadius="20"
+                                />
                              <Button Text="Resume"
                                 Grid.Row="4"
                                 TextColor="DarkRed"
@@ -72,9 +97,12 @@
                                 HorizontalOptions="Center" 
                                 Clicked="Resume"
                                 BackgroundColor="FloralWhite"
-                                BorderColor="Black" BorderWidth="2"/>
+                                BorderColor="Black" BorderWidth="2"
+                                HeightRequest="50" BorderRadius="20"
+                                FontFamily ="font4.ttf#font4"
+                                FontSize="Title"/>
             </Grid>
-
+              
         </StackLayout>
     </StackLayout>
 </ContentPage>

@@ -12,18 +12,25 @@
                             FontSize="18"
                HorizontalOptions="Center"
                VerticalOptions="CenterAndExpand"
-               FontAttributes="Bold"/>
+               FontAttributes="Bold"
+               Padding="0,20,0,35"/>
 
         <Button Image="ninja.png" x:Name="ninja"
                 Padding="0"
-                VerticalOptions="CenterAndExpand"
-                HorizontalOptions="CenterAndExpand"/>
+                VerticalOptions="Center"
+                HorizontalOptions="Center"/>
 
         <Button TextColor="#FFFFFF"
-                BackgroundColor="Black"
+                BackgroundColor="black"
                 Text="Play" Clicked="Handle_Clicked"
-                Padding="0,0,0,55"
-                FontSize="Large"/>
-           
+                HorizontalOptions="Center"
+                FontFamily = "LastNinja-BL6B.ttf#LastNinja-BL6B"
+                BorderColor="White"
+                BorderWidth="2"
+                FontSize="Large"
+                HeightRequest="50" BorderRadius="20" />
+        <Label TextColor="Black"
+               BackgroundColor="Black"
+               Padding="0,0,0,55"/>
     </StackLayout>
 </ContentPage>

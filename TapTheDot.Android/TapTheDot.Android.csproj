@@ -129,6 +129,10 @@
       <Generator>
       </Generator>
     </AndroidResource>
+    <AndroidResource Include="Resources\drawable\dojo.jpg">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\circle.png" />
@@ -141,6 +145,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\LastNinja-BL6B.ttf" />
+    <AndroidAsset Include="Assets\font2.ttf" />
+    <AndroidAsset Include="Assets\font3.ttf" />
+    <AndroidAsset Include="Assets\font5.ttf" />
+    <AndroidAsset Include="Assets\font6.ttf" />
+    <AndroidAsset Include="Assets\font4.ttf" />
     <AndroidAsset Include="Assets\music1.mp3" />
   </ItemGroup>
   <ItemGroup>

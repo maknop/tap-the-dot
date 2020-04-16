@@ -10,6 +10,7 @@ namespace TapTheDot
         public HomePage()
         {
             InitializeComponent();
+            
         }
 
 
@@ -36,8 +37,11 @@ namespace TapTheDot
             GameScreen.speed = 1;
             GameScreen.lives = 10;
             App.Current.MainPage = new GameScreen();
+            
         }
 
+        
+        
         void Resume(object sender, EventArgs e)
         {
             App.Current.MainPage = new GameScreen();

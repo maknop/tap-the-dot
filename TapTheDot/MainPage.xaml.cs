@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Plugin.SimpleAudioPlayer;
 
 namespace TapTheDot
 {
@@ -16,7 +17,9 @@ namespace TapTheDot
         public MainPage()
         {
             InitializeComponent();
-
+            var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+            player.Load("music1.mp3");
+            player.Play();
             ninja.ImageSource = (FileImageSource)ImageSource.FromFile("ninja.png");
         }
 

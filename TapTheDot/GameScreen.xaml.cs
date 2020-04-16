@@ -63,9 +63,7 @@ namespace TapTheDot
         {
             
             InitializeComponent();
-            var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
-            player.Load("music1.mp3");
-            player.Play();
+            
           
             // In order for the player to continually move, we need to ensure the paint surface event handler is repeatedly executed
             // We want the timer to refresh 60 times per second, since that is the typical refresh rate of most monitors

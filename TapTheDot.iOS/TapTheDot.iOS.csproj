@@ -159,5 +159,6 @@
       <Generator></Generator>
     </BundleResource>
     <BundleResource Include="Resources\LastNinja-BL6B.ttf" />
+    <BundleResource Include="Resources\dojo.jpg" />
   </ItemGroup>
 </Project>
