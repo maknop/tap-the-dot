@@ -1,12 +1,13 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TapTheDot.SettingsPage">
     <StackLayout
-        BackgroundColor="MediumBlue">
-        
+        BackgroundColor="Black">
+
+        <Label Padding="0,0,0,25"/>
         <Label
             Text = "Dot*Ninja"
             FontFamily = "LastNinja-BL6B.ttf#LastNinja-BL6B"
-            TextColor="Silver"
+            TextColor="FloralWhite"
             FontSize="30"
             HorizontalOptions="Center">
            </Label>
@@ -15,16 +16,25 @@
                 
                 MinimumTrackColor="DarkRed"
                 ThumbColor="DarkRed"
+                
                 />
         <Label
-            Text="Volume"
-            FontFamily = "LastNinja-BL6B.ttf#LastNinja-BL6B"
-            FontSize="15"
+            Text="VOLUME"
+            FontFamily="font4.ttf#font4"
+            FontSize="Title"
             HorizontalOptions="Center"
-            TextColor="Silver"/>
+            TextColor="FloralWhite"/>
         <Button Text = "Home Page"
+                FontFamily="font4.ttf#font4"
+                FontSize = "Title"
+                TextColor="DarkRed"
+                BackgroundColor="FloralWhite"
                 HorizontalOptions="Center"
                 VerticalOptions="EndAndExpand"
-                    Clicked="NavigateButton_OnClicked1"/>
+                Clicked="NavigateButton_OnClicked1"
+                BorderColor="FloralWhite" BorderWidth="2"
+                HeightRequest="50" BorderRadius="20"
+                />
+        <Label Padding="0,10,0,0"></Label>
     </StackLayout>
 </ContentPage>

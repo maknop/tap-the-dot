@@ -6,10 +6,11 @@
 
 
             <!-- Page with logo and 'start' button -->
-        <Label Text="G.K.L.M Productions"
-               FontFamily = "LastNinja-BL6B.ttf#LastNinja-BL6B"
-                            TextColor="Red"
-                            FontSize="18"
+        <Label Text="G.K.L.M PRODUCTIONS"
+               
+               TextColor="FloralWhite"
+               FontSize="38"
+               FontFamily="font4.ttf#font4"
                HorizontalOptions="Center"
                VerticalOptions="CenterAndExpand"
                FontAttributes="Bold"
@@ -24,10 +25,11 @@
                 BackgroundColor="black"
                 Text="Play" Clicked="Handle_Clicked"
                 HorizontalOptions="Center"
-                FontFamily = "LastNinja-BL6B.ttf#LastNinja-BL6B"
+                FontFamily = "font4.ttf#font4"
+                FontSize="Title"
                 BorderColor="White"
                 BorderWidth="2"
-                FontSize="Large"
+              
                 HeightRequest="50" BorderRadius="20" />
         <Label TextColor="Black"
                BackgroundColor="Black"
