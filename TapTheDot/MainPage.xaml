@@ -21,15 +21,15 @@
                 VerticalOptions="Center"
                 HorizontalOptions="Center"/>
 
-        <Button TextColor="#FFFFFF"
-                BackgroundColor="black"
+        <Button 
+                BackgroundColor="FloralWhite"
                 Text="Play" Clicked="Handle_Clicked"
                 HorizontalOptions="Center"
                 FontFamily = "font4.ttf#font4"
                 FontSize="Title"
-                BorderColor="White"
+                BorderColor="FloralWhite"
                 BorderWidth="2"
-              
+                TextColor="DarkRed"
                 HeightRequest="50" BorderRadius="20" />
         <Label TextColor="Black"
                BackgroundColor="Black"

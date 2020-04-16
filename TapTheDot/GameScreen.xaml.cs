@@ -28,7 +28,7 @@ namespace TapTheDot
         {
             IsAntialias = true,
             Style = SKPaintStyle.Fill,
-            Color = SKColors.White
+            Color = SKColors.Black
         };
 
         // create the paint for the circle border
@@ -36,15 +36,15 @@ namespace TapTheDot
         {
             IsAntialias = true,
             Style = SKPaintStyle.Stroke,
-            Color = SKColors.Blue,
-            StrokeWidth = 5,
+            Color = SKColors.Black,
+            StrokeWidth = 6,
             StrokeCap = SKStrokeCap.Round
         };
 
         SKPaint playerLine = new SKPaint
         {
             Style = SKPaintStyle.Stroke,
-            Color = SKColors.Red,
+            Color = SKColors.DarkRed,
             StrokeWidth = 8,
             StrokeCap = SKStrokeCap.Round,
             IsAntialias = true
@@ -87,7 +87,7 @@ namespace TapTheDot
             // then we get the canvas that we can draw on
             SKCanvas canvas = surface.Canvas;
             // clear the canvas / view
-            canvas.Clear(SKColors.CornflowerBlue);
+            canvas.Clear(SKColors.Silver);
 
             int width = e.Info.Width;
             int height = e.Info.Height;
@@ -193,7 +193,7 @@ namespace TapTheDot
             _ = new SKPaint
             {
                 Style = SKPaintStyle.Stroke,
-                Color = Color.Red.ToSKColor(),
+                Color = Color.DarkRed.ToSKColor(),
                 StrokeWidth = 25
             };
         }
