@@ -1,46 +1,111 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TapTheDot.EndScreen">
-    <StackLayout>
-        <Grid>
-            <Label x:Name="YouLose"
-                   Text="Loser"
+    <StackLayout BackgroundColor="Black">
+        <Grid >
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                     <ColumnDefinition Width="*" />
+                     <ColumnDefinition Width="*" />
+                     
+         
+                </Grid.ColumnDefinitions>
+           <Label Text = "" Grid.Row="0" Padding="0,20,0,65"/>
+            
+            <Button Text="Leaderboard"
+                   Grid.Row="1"
+                   Grid.Column="1"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center" 
+                   Clicked="Leaderboard_Clicked"
+                   FontFamily = "font4.ttf#font4"
+                   FontSize="Title"
+                   BorderColor="FloralWhite"
+                   BorderWidth="2"
+                   TextColor="DarkRed"
+                   HeightRequest="50" BorderRadius="20"
+                   BackgroundColor="FloralWhite"
+
+
+                  
+                    />
+            <Button Text="Home Screen"
+                   Grid.Row="1"
+                   Grid.Column="0"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center" 
+                   Clicked="Home_Clicked"
+                   FontFamily = "font4.ttf#font4"
+                   FontSize="Title"
+                   BorderColor="FloralWhite"
+                   BorderWidth="2"
+                   TextColor="DarkRed"
+                   HeightRequest="50" BorderRadius="20"
+                   BackgroundColor="FloralWhite"
+                    />
+            
+                </Grid>
+                <Grid>
+
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                
+                </Grid.RowDefinitions>
+                    <Image Source="picture.jpg" x:Name="youlose"
+                    Grid.Row="0"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"/>
+                <Label x:Name="YouLose"
+                   Text="You Lose"
+                   TextColor="FloralWhite"
+                   Font = "LastNinja-BL6B.ttf#LastNinja-BL6B"
                    FontSize="Title"
                    HorizontalOptions="Center"
-                   Grid.Row="0"/>
+                   Grid.Row="1"
+                  
+                   />
             <Label x:Name="Score"
                    Text="Default Score"
                    FontSize="Title"
+                   TextColor="FloralWhite"
+                   Font = "LastNinja-BL6B.ttf#LastNinja-BL6B"
                    HorizontalOptions="Center"
-                   Grid.Row="1"/>
-            <Label Text="Dot*Ninjas"
-                   FontFamily = "LastNinja-BL6B.ttf#LastNinja-BL6B"
-                   TextColor="Black"
-                   FontSize="30"
                    Grid.Row="2"
+                   />
+            <Label Text="Dot*Ninja"
+                   FontFamily = "LastNinja-BL6B.ttf#LastNinja-BL6B"
+                   TextColor="FloralWhite"
+                   FontSize="30"
+                   Grid.Row="1"
                    VerticalOptions="Center"
                    HorizontalOptions="Center"
                              />
             <Button Text="Restart"
                    Grid.Row="3"
-                   TextColor="Green"
+                   Grid.Column="0"
+                   FontFamily = "font4.ttf#font4"
+                   FontSize="Title"
+                   BorderColor="FloralWhite"
+                   BorderWidth="2"
+                   TextColor="DarkRed"
+                   HeightRequest="50" BorderRadius="20"
+                   BackgroundColor="FloralWhite"
                    VerticalOptions="Center"
                    HorizontalOptions="Center"
                    Clicked="Restart_clicked"
+                
                    />
-            <Button Text="Home"
-                   Grid.Row="4"
-                   TextColor="Green"
-                   VerticalOptions="Center"
-                   HorizontalOptions="Center" 
-                   Clicked="Home_Clicked"
-                    />
-            <Button Text="Leaderboard"
-                   Grid.Row="5"
-                   TextColor="Green"
-                   VerticalOptions="Center"
-                   HorizontalOptions="Center" 
-                   Clicked="Leaderboard_Clicked"
-                    />
-        </Grid>
+            </Grid>
+            <Grid>
+            
+        </Grid> 
     </StackLayout>
 </ContentPage>
