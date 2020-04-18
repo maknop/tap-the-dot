@@ -57,9 +57,11 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
                 
                 </Grid.RowDefinitions>
-                    <Image Source="picture.jpg" x:Name="youlose"
+
+                <Image Source="picture.jpg" x:Name="youlose"
                     Grid.Row="0"
                     VerticalOptions="Center"
                     HorizontalOptions="Center"/>
@@ -78,18 +80,19 @@
                    TextColor="FloralWhite"
                    Font = "LastNinja-BL6B.ttf#LastNinja-BL6B"
                    HorizontalOptions="Center"
-                   Grid.Row="2"
+                   Grid.Row="3"
+                   
                    />
             <Label Text="Dot*Ninja"
                    FontFamily = "LastNinja-BL6B.ttf#LastNinja-BL6B"
                    TextColor="FloralWhite"
                    FontSize="30"
-                   Grid.Row="1"
+                   Grid.Row="2"
                    VerticalOptions="Center"
                    HorizontalOptions="Center"
                              />
             <Button Text="Restart"
-                   Grid.Row="3"
+                   Grid.Row="4"
                    Grid.Column="0"
                    FontFamily = "font4.ttf#font4"
                    FontSize="Title"

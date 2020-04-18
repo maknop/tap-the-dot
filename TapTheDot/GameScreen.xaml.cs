@@ -185,7 +185,11 @@ namespace TapTheDot
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            DisplayAlert("Notification", "Do you want to save this item?", "Save", "Don't Save");
+      
+            
+                App.Current.MainPage = new SettingsPage();
+
+            
         }
 
         private void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)

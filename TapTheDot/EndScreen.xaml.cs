@@ -34,7 +34,10 @@ namespace TapTheDot
         }
         void Leaderboard_Clicked(object sender, EventArgs e)
         {
+            
+                App.Current.MainPage = new Leaderboard();
 
+            
         }
     }
 }
