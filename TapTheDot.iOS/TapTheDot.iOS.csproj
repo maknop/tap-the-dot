@@ -67,6 +67,7 @@
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Persistence\SQLiteDb.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
@@ -160,5 +161,8 @@
     </BundleResource>
     <BundleResource Include="Resources\LastNinja-BL6B.ttf" />
     <BundleResource Include="Resources\dojo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Persistence\" />
   </ItemGroup>
 </Project>
