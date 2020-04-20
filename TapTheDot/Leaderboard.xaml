@@ -1,5 +1,58 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TapTheDot.Leaderboard">
-    <ContentPage.Content>
-    </ContentPage.Content>
+    <!--
+        Separator automatically is created in listview. Use this attribute
+        if we don't want it:
+
+        SeparatorVisibility="None"
+    -->
+    <StackLayout BackgroundColor="DarkRed">
+
+        <ListView x:Name="listView"
+                  RowHeight="10"/>
+  
+        <Grid>
+            <!-- Determines the number of columns -->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Determines the number of columns -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Button Text="Main Menu"
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    HeightRequest="50"
+                    BorderRadius="20"
+                    BorderColor="FloralWhite"
+                    BorderWidth="2"
+                    Font="font4.ttf#font4"
+                    BackgroundColor="FloralWhite"
+                    FontSize="Title"
+                    HorizontalOptions="Center"
+                    Clicked ="ToMainPage">
+            </Button>
+
+            <Button Text="New Game"
+                    Grid.Column="1"
+                    Grid.Row="0"
+                    HeightRequest="50"
+                    BorderRadius="20"
+                    BorderColor="FloralWhite"
+                    BorderWidth="2"
+                    Font="font4.ttf#font4"
+                    BackgroundColor="FloralWhite"
+                    FontSize="Title"
+                    HorizontalOptions="Center"
+                    Clicked ="ToNewGame">
+            </Button>
+
+
+        </Grid>
+    </StackLayout>
+
 </ContentPage>
