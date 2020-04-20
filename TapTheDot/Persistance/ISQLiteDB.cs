@@ -1,6 +1,6 @@
 ﻿using SQLite;
 
-namespace HelloWorld
+namespace TapTheDot
 {
     public interface ISQLiteDb
     {
