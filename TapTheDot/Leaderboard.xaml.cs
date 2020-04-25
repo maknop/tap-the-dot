@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
+
 using SQLite;
 using Xamarin.Forms;
-using System.Linq;
 
 namespace TapTheDot
 {
@@ -12,19 +11,11 @@ namespace TapTheDot
      *
      * Purpose: Gettors and Settors for items added to the database.
      */
-    public class Players
+    public class UserScores
     {
-        [PrimaryKey, AutoIncrement, Column("ID")]
-        public int Id { get; set; }
-
-        [Column("Username")]
+        public new int Id { get; set; }
         public string Username { get; set; }
-
-        [Column("Score")]
         public int Score { get; set; }
-
-        [Column("Level")]
-        public int LevelAchieved { get; set; }
     }
 
     /*
@@ -35,41 +26,20 @@ namespace TapTheDot
      */
     public partial class Leaderboard : ContentPage
     {
-        
-
-        private SQLiteAsyncConnection _connection;
-        private ObservableCollection<Players> allUsers;
-
         // Constructor
         public Leaderboard()
         {
             InitializeComponent();
-            UserInput.Text = "Username: " + EndScreen.userInput;
 
-            _connection = DependencyService.Get<ISQLiteDb>().GetConnection();
-        }
+            var connection = DependencyService.Get<ISQLiteDb>().GetConnection();
 
-        // protected override async void OnAppearing()
-        protected new async void OnAppearing()
-        {
-            await _connection.CreateTableAsync<Players>();
-
-            var users = await _connection.Table<Players>().ToListAsync();
-            allUsers = new ObservableCollection<Players>(users);
-            userListView.ItemsSource = allUsers;
-            base.OnAppearing();
-        }
-
-
-        // Adds to the database
-        async void addPlayer(object sender, EventArgs e)
-        {
-            Players p = new Players();
-            var userList = new Players { Username = "Matt", Score = p.Score, LevelAchieved = p.LevelAchieved };
-
-            await _connection.InsertAsync(userList);
-
-            allUsers.Add(userList);
+            var names = new List<string> {
+                "Matt",
+                "Luke",
+                "Gwen",
+                "Khadijo"
+            };
+            listView.ItemsSource = names;
         }
 
 
@@ -81,13 +51,28 @@ namespace TapTheDot
 
         void ToNewGame(object sender, EventArgs e)
         {
-            GameScreen.reverse = false;
-            GameScreen.score = 0;
-            GameScreen.tracker = 0;
-            GameScreen.level = 1;
-            GameScreen.speed = 1;
-            GameScreen.lives = 10;
             App.Current.MainPage = new GameScreen();
+        }
+
+
+        // Adds to the database
+        void add(object sender, System.EventArgs e)
+        {
+
+        }
+
+
+        // Updates a line in the database
+        void update(object sender, System.EventArgs e)
+        {
+
+        }
+
+
+        // Deletes a line from the database
+        void delete(object sender, System.EventArgs e)
+        {
+
         }
 
     }

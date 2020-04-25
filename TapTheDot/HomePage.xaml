@@ -33,11 +33,8 @@
                         FontFamily = "font4.ttf#font4"
                         FontSize="Title"
                         BackgroundColor="FloralWhite"
-                        BorderColor="Black"
-                        BorderWidth="2"
-                        HeightRequest="50"
-                        WidthRequest="140"
-                        BorderRadius="20"/>
+                        BorderColor="Black" BorderWidth="2"
+                        HeightRequest="50" BorderRadius="20"/>
                      <Button Text="Leaderboard"
                         Grid.Row="1"
                         Grid.Column="1"
@@ -47,9 +44,7 @@
                         FontSize="Title"
                         Clicked="Leaderboard"
                         BackgroundColor="FloralWhite"
-                        HeightRequest="50"
-                        WidthRequest="140"
-                        BorderRadius="20"
+                        HeightRequest="50" BorderRadius="20"
                         BorderColor="Black" BorderWidth="2"/>
                 </Grid>
             

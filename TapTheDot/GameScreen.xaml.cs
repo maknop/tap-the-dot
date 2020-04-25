@@ -160,7 +160,7 @@ namespace TapTheDot
                 currentRotation -= speed * 2;
             }
             
-            if (lives <= 0)
+            if (lives == 0)
             {
                 App.Current.MainPage = new EndScreen();
             }
