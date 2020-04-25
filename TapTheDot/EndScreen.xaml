@@ -80,17 +80,26 @@
                    TextColor="FloralWhite"
                    Font = "LastNinja-BL6B.ttf#LastNinja-BL6B"
                    HorizontalOptions="Center"
-                   Grid.Row="3"
-                   
-                   />
+                   Grid.Row="3" />
+
+
+            <Entry x:Name="username"
+                   WidthRequest="5"
+                   TextChanged="OnEntryTextChanged"
+                   Completed="OnEntryCompleted"
+                   Placeholder="Enter username"
+                   PlaceholderColor="White"
+                   TextColor="White"></Entry>
+
+
             <Label Text="Dot*Ninja"
                    FontFamily = "LastNinja-BL6B.ttf#LastNinja-BL6B"
                    TextColor="FloralWhite"
                    FontSize="30"
                    Grid.Row="2"
                    VerticalOptions="Center"
-                   HorizontalOptions="Center"
-                             />
+                   HorizontalOptions="Center"/>
+
             <Button Text="Restart"
                    Grid.Row="4"
                    Grid.Column="0"
