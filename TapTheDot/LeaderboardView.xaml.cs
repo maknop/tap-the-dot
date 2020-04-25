@@ -35,8 +35,6 @@ namespace TapTheDot
      */
     public partial class Leaderboard : ContentPage
     {
-        
-
         private SQLiteAsyncConnection _connection;
         private ObservableCollection<Players> allUsers;
 
@@ -44,13 +42,11 @@ namespace TapTheDot
         public Leaderboard()
         {
             InitializeComponent();
-            UserInput.Text = "Username: " + EndScreen.userInput;
 
             _connection = DependencyService.Get<ISQLiteDb>().GetConnection();
         }
 
-        // protected override async void OnAppearing()
-        protected new async void OnAppearing()
+        protected override async void OnAppearing()
         {
             await _connection.CreateTableAsync<Players>();
 
@@ -81,12 +77,6 @@ namespace TapTheDot
 
         void ToNewGame(object sender, EventArgs e)
         {
-            GameScreen.reverse = false;
-            GameScreen.score = 0;
-            GameScreen.tracker = 0;
-            GameScreen.level = 1;
-            GameScreen.speed = 1;
-            GameScreen.lives = 10;
             App.Current.MainPage = new GameScreen();
         }
 

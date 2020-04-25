@@ -12,13 +12,13 @@
 
   <ItemGroup>
     <PackageReference Include="sqlite-net-pcl" Version="1.6.292" />
-    <PackageReference Include="Xamarin.Forms" Version="4.5.0.356" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.5.1" />
+    <PackageReference Include="Xamarin.Forms" Version="4.5.0.617" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.3" />
     <PackageReference Include="sqlite" Version="3.13.0" />
-    <PackageReference Include="SQLitePCLRaw.core" Version="2.0.2" />
     <PackageReference Include="SkiaSharp" Version="1.68.1.1" />
     <PackageReference Include="SkiaSharp.Views.Forms" Version="1.68.1.1" />
     <PackageReference Include="Xam.Plugin.SimpleAudioPlayer" Version="1.4.0" />
+    <PackageReference Include="Microsoft.Data.Sqlite.Core" Version="3.1.3" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="leaderboard.db" />
@@ -33,6 +33,7 @@
     <Compile Remove="Persistance\SQLiteAsyncConnection.cs" />
     <Compile Remove="ISQLiteDb.cs" />
     <Compile Remove="SKCanvasView.cs" />
+    <Compile Remove="LeaderboardView.xaml.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.iOS">
