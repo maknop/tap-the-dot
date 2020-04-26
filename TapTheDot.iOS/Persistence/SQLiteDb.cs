@@ -12,8 +12,8 @@ namespace TapTheDot.iOS
     {
         public SQLiteAsyncConnection GetConnection()
         {
-            var documentsPath = Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
-            var path = Path.Combine(documentsPath, "MySQLite.db3");
+            var documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            var path = Path.Combine(documentsPath, "Players.db");
 
             return new SQLiteAsyncConnection(path);
         }

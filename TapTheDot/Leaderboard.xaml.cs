@@ -14,8 +14,8 @@ namespace TapTheDot
      */
     public class Players
     {
-        [PrimaryKey, AutoIncrement, Column("ID")]
-        public int Id { get; set; }
+        //[PrimaryKey, AutoIncrement, Column("ID")]
+        //public int Id { get; set; }
 
         [Column("Username")]
         public string Username { get; set; }
@@ -44,13 +44,14 @@ namespace TapTheDot
         public Leaderboard()
         {
             InitializeComponent();
-            UserInput.Text = "Username: " + EndScreen.userInput;
+            //UserInput.Text = "Username: " + EndScreen.userInput;
 
             _connection = DependencyService.Get<ISQLiteDb>().GetConnection();
         }
 
-        // protected override async void OnAppearing()
-        protected new async void OnAppearing()
+
+        protected override async void OnAppearing()
+        //protected new async void OnAppearing()
         {
             await _connection.CreateTableAsync<Players>();
 
@@ -73,12 +74,14 @@ namespace TapTheDot
         }
 
 
+        // 'Main Page' button functionality.
         void ToMainPage(object sender, EventArgs e)
         {
             App.Current.MainPage = new HomePage();
         }
 
 
+        // 'New Game' button functionality
         void ToNewGame(object sender, EventArgs e)
         {
             GameScreen.reverse = false;
