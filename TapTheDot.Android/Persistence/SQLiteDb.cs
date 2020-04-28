@@ -12,9 +12,10 @@ namespace TapTheDot.Android
     {
         public SQLiteAsyncConnection GetConnection()
         {
-            var documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            var path = Path.Combine(documentsPath, "Players.db");
-
+            String dbName = "Users.db";
+            var documentsPath = Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+            var path = Path.Combine(documentsPath, dbName);
+            
             return new SQLiteAsyncConnection(path);
         }
 
