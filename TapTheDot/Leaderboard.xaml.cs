@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using SQLite;
 using Xamarin.Forms;
 using System.Linq;
+using System.ComponentModel;
 
 namespace TapTheDot
 {
@@ -12,14 +13,17 @@ namespace TapTheDot
      *
      * Purpose: Gettors and Settors for items added to the database.
      */
-    public class Players
+    public class Users : INotifyPropertyChanged
     {
-        //[PrimaryKey, AutoIncrement, Column("ID")]
-        //public int Id { get; set; }
+        public event PropertyChangedEventHandler PropertyChanged;
 
+        [PrimaryKey, AutoIncrement, Column("ID")]
+        public int Id { get; set; }
+        
         [Column("Username")]
-        public string Username { get; set; }
+        public String Username { get; set; }
 
+        
         [Column("Score")]
         public int Score { get; set; }
 
@@ -38,7 +42,7 @@ namespace TapTheDot
         
 
         private SQLiteAsyncConnection _connection;
-        private ObservableCollection<Players> allUsers;
+        private ObservableCollection<Users> allUsers;
 
         // Constructor
         public Leaderboard()
@@ -53,20 +57,41 @@ namespace TapTheDot
         protected override async void OnAppearing()
         //protected new async void OnAppearing()
         {
-            await _connection.CreateTableAsync<Players>();
+            //_connection.DropTableAsync<Players>();
+            await _connection.CreateTableAsync<Users>();
 
-            var users = await _connection.Table<Players>().ToListAsync();
-            allUsers = new ObservableCollection<Players>(users);
+
+            // This was printing something to listview.
+            /*
+            userListView.ItemsSource = new List<Players>
+            {
+                new Players {
+                    Username = EndScreen.userInput,
+                    Score = GameScreen.score,
+                    LevelAchieved = GameScreen.level
+                }
+            };
+            */
+
+
+
+            var users = await _connection.Table<Users>().ToListAsync();
+            allUsers = new ObservableCollection<Users>(users);
             userListView.ItemsSource = allUsers;
+
             base.OnAppearing();
         }
 
 
         // Adds to the database
-        async void addPlayer(object sender, EventArgs e)
+        async void AddPlayer(object sender, EventArgs e)
         {
-            Players p = new Players();
-            var userList = new Players { Username = "Matt", Score = p.Score, LevelAchieved = p.LevelAchieved };
+            var userList = new Users
+            {
+                Username = EndScreen.userInput,
+                Score = GameScreen.score,
+                LevelAchieved = GameScreen.level
+            };
 
             await _connection.InsertAsync(userList);
 
@@ -92,6 +117,6 @@ namespace TapTheDot
             GameScreen.lives = 10;
             App.Current.MainPage = new GameScreen();
         }
-
+        
     }
 }

@@ -8,7 +8,7 @@
     -->
     <StackLayout BackgroundColor="DarkRed">
 
-        <ListView x:Name="userListView"></ListView>
+        <ListView x:Name="userListView"/>
 
         <Grid>
             <!-- Determines the number of columns -->
@@ -22,18 +22,7 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-
-
-            <Label x:Name="UserInput"
-                   Text="Default Score"
-                   FontSize="Title"
-                   TextColor="FloralWhite"
-                   Font = "LastNinja-BL6B.ttf#LastNinja-BL6B"
-                   HorizontalOptions="Center"
-                   Grid.Row="1" />
-
-
-
+            
             <Button Text="Main Menu"
                     Grid.Column="0"
                     Grid.Row="0"
@@ -61,8 +50,7 @@
                     HorizontalOptions="Center"
                     Clicked ="ToNewGame">
             </Button>
-
-
+            
         </Grid>
     </StackLayout>
 
