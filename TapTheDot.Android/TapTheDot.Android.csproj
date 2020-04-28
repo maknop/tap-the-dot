@@ -152,6 +152,8 @@
     <AndroidAsset Include="Assets\LastNinja-BL6B.ttf" />
     <AndroidAsset Include="Assets\music1.mp3" />
     <AndroidAsset Include="Assets\font4.ttf" />
+    <AndroidAsset Include="Assets\Players.db3" />
+    <AndroidAsset Include="Assets\Users.db" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\dot.png" />
