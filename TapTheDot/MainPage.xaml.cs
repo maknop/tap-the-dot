@@ -22,11 +22,11 @@ namespace TapTheDot
             player.Play();
             ninja.ImageSource = (FileImageSource)ImageSource.FromFile("ninja.png");
         }
-
-       
+        
         void Handle_Clicked(object sender, EventArgs e)
         {
             App.Current.MainPage = new HomePage();
         }
+
     }
 }
