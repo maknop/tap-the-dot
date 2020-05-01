@@ -13,9 +13,15 @@ namespace TapTheDot.Android
         public SQLiteAsyncConnection GetConnection()
         {
             String dbName = "Users.db";
-            var documentsPath = Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+            String documentsPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+            //var documentsPath = Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments);
             var path = Path.Combine(documentsPath, dbName);
-            
+
+            if (File.Exists(dbName))
+            {
+                Console.WriteLine("The file exists.");
+            }
+
             return new SQLiteAsyncConnection(path);
         }
 
