@@ -18,12 +18,14 @@
     <PackageReference Include="SkiaSharp.Views.Forms" Version="1.68.1.1" />
     <PackageReference Include="Xam.Plugin.SimpleAudioPlayer" Version="1.4.0" />
     <PackageReference Include="sqlite-net-pcl" Version="1.6.292" />
+    <PackageReference Include="SharpAdbClient" Version="2.2.35" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="leaderboard.db" />
     <None Remove="leaderboard.db" />
     <None Remove="DatabaseName.db" />
     <None Remove=".DS_Store" />
+    <None Remove="Users.db" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Persistance\" />
@@ -38,5 +40,13 @@
     <Reference Include="Xamarin.iOS">
       <HintPath>..\..\..\..\..\..\Library\Frameworks\Xamarin.iOS.framework\Versions\13.10.0.21\lib\mono\Xamarin.iOS\Xamarin.iOS.dll</HintPath>
     </Reference>
+    <Reference Include="Mono.Android">
+      <HintPath>..\..\..\..\Library\Frameworks\Xamarin.Android.framework\Versions\10.2.0.100\lib\xamarin.android\xbuild-frameworks\MonoAndroid\v9.0\Mono.Android.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Users.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
   </ItemGroup>
 </Project>
