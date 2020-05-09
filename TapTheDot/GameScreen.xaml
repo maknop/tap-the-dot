@@ -33,6 +33,7 @@
                     Clicked ="Button_Clicked"
                     Grid.Row="0"
                     />
+
             <Button Text="Leaderboard"
                     HeightRequest="50" BorderRadius="20"
                     BorderColor="FloralWhite" BorderWidth="2"
@@ -41,7 +42,10 @@
                     BackgroundColor="FloralWhite"
                     Grid.Row="0"
                     Grid.Column="1"
-                    HorizontalOptions="Center" />
+                    HorizontalOptions="Center"
+                    Clicked ="Leaderboard_Clicked"
+                    />
+
             <Button Text="Back"
                     Grid.Column="2"
                     HorizontalOptions="EndAndExpand"
