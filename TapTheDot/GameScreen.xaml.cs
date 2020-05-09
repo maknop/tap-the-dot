@@ -244,5 +244,12 @@ namespace TapTheDot
                 lives -= 1;
             }
         }
+
+
+        // Leaderboard button functionality.
+        void Leaderboard_Clicked(object sender, EventArgs e)
+        {
+            App.Current.MainPage = new Leaderboard();
+        }
     }
 }
