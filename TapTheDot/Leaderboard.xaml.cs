@@ -62,6 +62,11 @@ namespace TapTheDot
             var usersList = await _connection.Table<Users>().ToListAsync();
             allUsers = new ObservableCollection<Users>(usersList);
 
+            //for (int i = 0; i < allUsers.Count; i++)
+            //{
+                //Testing.Text = allUsers[allUsers.Count-1].ToString();
+            //}
+
             userListView.ItemsSource = allUsers;
             base.OnAppearing();
            
@@ -73,9 +78,9 @@ namespace TapTheDot
         {
             if (GameScreen.score > 0)
             {
-                var userList = new Users
+                Users userList = new Users
                 {
-                    Username = inputName.ToString(),
+                    Username = inputName.Text,
                     Score = GameScreen.score,
                     LevelAchieved = GameScreen.level
                 };
@@ -87,7 +92,9 @@ namespace TapTheDot
 
                 allUsers.Add(userList);
 
-            
+                
+                await DisplayAlert("Success", "User added Successfully", "OK");
+
                 GameScreen.reverse = false;
                 GameScreen.score = 0;
                 GameScreen.tracker = 0;
