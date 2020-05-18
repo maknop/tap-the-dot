@@ -163,7 +163,9 @@
       <SubType></SubType>
       <Generator></Generator>
     </BundleResource>
-    <BundleResource Include="Resources\LastNinja-BL6B.ttf" />
+    <BundleResource Include="Resources\LastNinja-BL6B.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </BundleResource>
     <BundleResource Include="Resources\dojo.jpg" />
   </ItemGroup>
   <ItemGroup>
