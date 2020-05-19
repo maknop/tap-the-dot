@@ -2,6 +2,7 @@
 using System.Collections.ObjectModel;
 using SQLite;
 using Xamarin.Forms;
+using System.Linq;
 
 namespace TapTheDot
 {
@@ -51,22 +52,12 @@ namespace TapTheDot
 
         protected override async void OnAppearing()
         {
-            //username.Text = inputName.ToString();
-            //score.Text = GameScreen.score.ToString();
-            //Level.Text = GameScreen.level.ToString();
-
-
             //_connection.DropTableAsync<Users>();
             await _connection.CreateTableAsync<Users>();
 
             var usersList = await _connection.Table<Users>().ToListAsync();
             allUsers = new ObservableCollection<Users>(usersList);
-
-            //for (int i = 0; i < allUsers.Count; i++)
-            //{
-                //Testing.Text = allUsers[allUsers.Count-1].ToString();
-            //}
-
+            
             userListView.ItemsSource = allUsers;
             base.OnAppearing();
            
@@ -87,8 +78,7 @@ namespace TapTheDot
 
               
 
-                await _connection.InsertAsync(userList);
-                //await _connection.UpdateAsync(userList);
+                int rowsAdded = await _connection.InsertAsync(userList);
 
                 allUsers.Add(userList);
 

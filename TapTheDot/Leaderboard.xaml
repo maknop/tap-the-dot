@@ -27,7 +27,7 @@
             Text="Name"
             TextColor="FloralWhite"
             Font = "LastNinja-BL6B.ttf#LastNinja-BL6B"
-            FontSize="Title"
+            FontSize="Medium"
             Grid.Column="0"
             Grid.Row="1"
             HeightRequest="50"
@@ -37,7 +37,7 @@
             Text="Score"
             TextColor="FloralWhite"
             Font = "LastNinja-BL6B.ttf#LastNinja-BL6B"
-            FontSize="Title"
+            FontSize="Medium"
             Grid.Column="1"
             Grid.Row="1"
             HorizontalOptions="Center"/>
@@ -46,29 +46,40 @@
             Text="Level"
             TextColor="FloralWhite"
             Font = "LastNinja-BL6B.ttf#LastNinja-BL6B"
-            FontSize="Title"
+            FontSize="Medium"
             Grid.Column="2"
             Grid.Row="1"
             HorizontalOptions="Center"/>
 
         </Grid>
-
-        <ListView x:Name="userListView"
-                ItemsSource="{Binding allUsers}"
-                VerticalOptions="CenterAndExpand"
-                RowHeight="40"
-                SeparatorColor="Black"
-        />
-
-        <!--
-        <listView x:Name="userListView">
-            <StackLayout BackgroundColor="Bisque" Padding="5" Spacing="5">
-                <Label Text="{Binding Category}" TextColor="Black" />
-            </StackLayout>
-        </listView>
-        -->
         
+        <ListView x:Name="userListView"                 
+                  VerticalOptions="CenterAndExpand"
+                  RowHeight="40"
+                  SeparatorColor="#000000"
+                  >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="30*" />
+                                <ColumnDefinition Width="30*" />
+                                <ColumnDefinition Width="30*" />
+                            </Grid.ColumnDefinitions>
 
+                            <Label  Grid.Column="0" Text="{Binding Username}" FontSize="Medium" HorizontalOptions="Center" VerticalOptions="Center"/>
+                            <Label  Grid.Column="1" Text="{Binding Score}" FontSize="Medium" HorizontalOptions="Center" VerticalOptions="Center"/>
+                            <Label Grid.Column="2" Text="{Binding LevelAchieved}" FontSize="Medium" HorizontalOptions="Center" VerticalOptions="Center"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
         <Grid>
             <!-- Determines the number of columns -->
             <Grid.ColumnDefinitions>
@@ -83,8 +94,6 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-
-
             
             <Entry x:Name="inputName"
                    x:FieldModifier="public"
@@ -97,7 +106,8 @@
                    BackgroundColor="White"
                    Grid.Column="1"
                    Grid.Row="0"
-                   TextColor="Black"></Entry>
+                   TextColor="Black">
+            </Entry>
 
             <Button Text="Main Menu"
                     Grid.Column="0"
